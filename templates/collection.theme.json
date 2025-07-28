@@ -25,7 +25,7 @@
         "show_full_width": true,
         "bg_color": "",
         "image": "{{ collection.image }}",
-        "sub_heading": "Soft or fierce, power is yours.",
+        "sub_heading": "{{ collection.metafields.custom.collection_sub_title.value }}",
         "heading": "{{ collection.title }}",
         "show_description": false
       }
