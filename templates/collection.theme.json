@@ -154,6 +154,7 @@
         "collection_4Xm8d9",
         "collection_DEWnKW"
       ],
+      "disabled": true,
       "name": "Collections",
       "settings": {
         "heading": "Minds Behind $divider Empowerment",
@@ -215,6 +216,15 @@
       "settings": {
         "title": "THE DISPATCH $divider No filters. just feelings"
       }
+    },
+    "collection_artist_list_NgbCLE": {
+      "type": "collection-artist-list",
+      "name": "Collection Artist List",
+      "settings": {
+        "heading": "",
+        "button": "Find more Artists",
+        "link": ""
+      }
     }
   },
   "order": [
@@ -223,6 +233,7 @@
     "design_series_NYrjzj",
     "product-grid",
     "home_collections_kwA6Ch",
+    "collection_artist_list_NgbCLE",
     "collection_dispatch_p6FXYR"
   ]
 }
