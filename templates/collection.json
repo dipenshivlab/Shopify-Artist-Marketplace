@@ -30,6 +30,15 @@
         "color_scheme": "scheme-1"
       }
     },
+    "dynamic_collection_series_gCN6xU": {
+      "type": "dynamic-collection-series",
+      "name": "Dynamic Collection Series",
+      "settings": {
+        "heading": "Design series $divider $artist",
+        "button": "Explore more series",
+        "link": ""
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -128,6 +137,7 @@
   "order": [
     "collection_banner_tM4VNj",
     "banner",
+    "dynamic_collection_series_gCN6xU",
     "product-grid",
     "collection_with_slider_mAn4fp"
   ]
