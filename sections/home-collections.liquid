@@ -15,6 +15,7 @@
             {% for block in section.blocks %}
               {% if block.settings.collection != blank or block.settings.collection_image != blank %}
                 {% assign collection = block.settings.collection %}
+                {% assign collection_link = collection.metafields.custom.redirect_link %}
                 <div class="collection-item">
                   <div class="collection-item-left">
                     {% if block.settings.collection_image != blank %}
@@ -49,15 +50,15 @@
                       {% endfor %}
                     </div>
                     <a
-                      {% if collection.url == blank %}
-                        role="link" aria-disabled="true"
-                      {% else %}
-                        href="{{ collection.url }}"
-                      {% endif %}
-                      class="collection-button"
-                    >
-                      {{ 'icon-button.svg' | inline_asset_content }}
-                    </a>
+                    {% if collection.url == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{% if collection_link != blank %}{{ collection_link }}{% else %}{{ collection.url }}{% endif %}"
+                    {% endif %}
+                    class="collection-button"
+                  >
+                    {{ 'icon-button.svg' | inline_asset_content }}
+                  </a>
                   </div>
                 </div>
               {% endif %}

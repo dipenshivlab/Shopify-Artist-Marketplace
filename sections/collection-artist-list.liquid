@@ -1,8 +1,8 @@
 {% if section.settings.heading != blank and collection.metafields.custom.artist_list != blank %}
   {% assign collection_title = collection.title | prepend: 'From ' %}
   {% assign artist_list = collection.metafields.custom.artist_list.value %}
-  {{ 'home-collections.css' | asset_url | stylesheet_tag }}
-  <div class="collection-main-section collection-artist-list-main">
+  {{ 'collection-artist-list.css' | asset_url | stylesheet_tag }}
+  <div class="collection-artist-list-main">
     <div class="full-width">
       <div class="collection-container-main">
         <div class="top-header-main">
@@ -22,6 +22,7 @@
           {% for artist in artist_list %}
             {% if artist != blank or artist.featured_image != blank %}
               {% assign collection = artist %}
+              {% assign collection_link = collection.metafields.custom.redirect_link %}
               <div class="collection-item">
                 <div class="collection-item-left">
                   <div class="image-main">

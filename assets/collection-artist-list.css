@@ -1,14 +1,14 @@
-.collection-main-section {
+.collection-artist-list-main {
     margin-bottom: 86px;
     overflow: hidden;
     padding: 0 20px;
 }
 
-.collection-main-section .top-header-main {
+.collection-artist-list-main .top-header-main {
     margin-bottom: 60px;
 }
 
-.collection-main-section .top-header-main .heading {
+.collection-artist-list-main .top-header-main .heading {
     text-transform: uppercase;
     margin: 0;
     display: flex;
@@ -16,7 +16,7 @@
     gap: 20px;
 }
 
-.collection-main-section .top-header-main .divider {
+.collection-artist-list-main .top-header-main .divider {
     flex: 1;
     width: 100%;
     height: 2px;
@@ -24,7 +24,7 @@
     display: inline-flex;
 }
 
-.collection-main-section .collection-container .collection-item {
+.collection-artist-list-main .collection-container .collection-item {
     padding: 20px 36px;
     display: flex;
     align-items: center;
@@ -34,17 +34,17 @@
     cursor: pointer;
 }
 
-.collection-main-section .collection-container .collection-item:first-child {
+.collection-artist-list-main .collection-container .collection-item:first-child {
     border-top: 2px solid #11120D;
 }
 
-.collection-main-section .collection-container .collection-item .collection-item-left {
+.collection-artist-list-main .collection-container .collection-item .collection-item-left {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.collection-main-section .collection-container .collection-item .image-main {
+.collection-artist-list-main .collection-container .collection-item .image-main {
     width: 100px;
     min-width: 100px;
     height: 100px;
@@ -52,13 +52,13 @@
     overflow: hidden;
 }
 
-.collection-main-section .collection-container .collection-item .image-main img {
+.collection-artist-list-main .collection-container .collection-item .image-main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.collection-main-section .collection-container .collection-item .collection-title {
+.collection-artist-list-main .collection-container .collection-item .collection-title {
     font-weight: 400;
     font-size: calc(var(--font-body-scale) * 2.8rem);
     line-height: 1.1;
@@ -68,13 +68,13 @@
     font-family: var(--font-heading-family);
 }
 
-.collection-main-section .collection-container .collection-item .collection-item-right {
+.collection-artist-list-main .collection-container .collection-item .collection-item-right {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.collection-main-section .collection-container .collection-item .collection-product-images {
+.collection-artist-list-main .collection-container .collection-item .collection-product-images {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -83,7 +83,7 @@
     transition: all 0.3s linear;
 }
 
-.collection-main-section .collection-container .collection-item .collection-product-images .image-box {
+.collection-artist-list-main .collection-container .collection-item .collection-product-images .image-box {
     display: flex;
     align-items: center;
     width: 100px;
@@ -92,18 +92,18 @@
     overflow: hidden;
 }
 
-.collection-main-section .collection-container .collection-item:hover .collection-product-images {
+.collection-artist-list-main .collection-container .collection-item:hover .collection-product-images {
     opacity: 1;
     visibility: visible;
 }
 
-.collection-main-section .collection-container .collection-item .collection-product-images img {
+.collection-artist-list-main .collection-container .collection-item .collection-product-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.collection-main-section .collection-container .collection-item .collection-button {
+.collection-artist-list-main .collection-container .collection-item .collection-button {
     width: 100px;
     min-width: 100px;
     height: 100px;
@@ -112,29 +112,29 @@
     justify-content: center;
 }
 
-.collection-main-section .collection-container .collection-item .collection-button svg {
+.collection-artist-list-main .collection-container .collection-item .collection-button svg {
     max-width: 100%;
 }
 
-.collection-main-section .collection-container .collection-item .collection-button svg rect {
+.collection-artist-list-main .collection-container .collection-item .collection-button svg rect {
     fill: #719EA34D;
     transition: all 0.3s linear;
 }
 
-.collection-main-section .collection-container .collection-item:hover .collection-button svg rect {
+.collection-artist-list-main .collection-container .collection-item:hover .collection-button svg rect {
     fill: #11120D;
 }
 
-.collection-main-section .collection-container .collection-item .collection-button svg path {
+.collection-artist-list-main .collection-container .collection-item .collection-button svg path {
     stroke: #11120D;
     transition: all 0.3s linear;
 }
 
-.collection-main-section .collection-container .collection-item:hover .collection-button svg path {
+.collection-artist-list-main .collection-container .collection-item:hover .collection-button svg path {
     stroke: #FFFAF4;
 }
 
-.collection-main-section .button {
+.collection-artist-list-main .button {
     padding: 8px 24px;
     border-radius: 4px;
     background-color: #11120d;
@@ -154,111 +154,111 @@
     width: max-content;
 }
 
-.collection-main-section .button:hover {
+.collection-artist-list-main .button:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
-.collection-main-section .button::after,
-.collection-main-section .button::before {
+.collection-artist-list-main .button::after,
+.collection-artist-list-main .button::before {
     display: none;
 }
 
 @media(max-width: 1023px) {
-    .collection-main-section {
+    .collection-artist-list-main {
         margin-bottom: 80px;
     }
 
-    .collection-main-section .top-header-main {
+    .collection-artist-list-main .top-header-main {
         margin-bottom: 40px;
     }
 
-    .collection-main-section .collection-container .collection-item {
+    .collection-artist-list-main .collection-container .collection-item {
         padding: 20px;
         gap: 15px;
     }
 
-    .collection-main-section .collection-container .collection-item .collection-item-left {
+    .collection-artist-list-main .collection-container .collection-item .collection-item-left {
         gap: 15px;
     }
 
-    .collection-main-section .collection-container .collection-item .image-main {
+    .collection-artist-list-main .collection-container .collection-item .image-main {
         width: 80px;
         min-width: 80px;
         height: 80px;
     }
 
-    .collection-main-section .collection-container .collection-item .collection-title {
+    .collection-artist-list-main .collection-container .collection-item .collection-title {
         font-size: calc(var(--font-body-scale) * 2rem);
     }
 
-    .collection-main-section .collection-container .collection-item .collection-item-right {
+    .collection-artist-list-main .collection-container .collection-item .collection-item-right {
         gap: 10px;
     }
 
-    .collection-main-section .collection-container .collection-item .collection-product-images {
+    .collection-artist-list-main .collection-container .collection-item .collection-product-images {
         display: none;
     }
 
-    .collection-main-section .collection-container .collection-item .collection-button {
+    .collection-artist-list-main .collection-container .collection-item .collection-button {
         width: 80px;
         min-width: 80px;
         height: 80px;
     }
 
-    .collection-main-section .button {
+    .collection-artist-list-main .button {
         font-size: calc(var(--font-body-scale) * 1.8rem);
         margin-top: 30px;
     }
 }
 
 @media(max-width: 767px) {
-    .collection-main-section {
+    .collection-artist-list-main {
         padding: 0 10px;
     }
 
-    .collection-main-section .top-header-main {
+    .collection-artist-list-main .top-header-main {
         margin-bottom: 20px;
     }
 
-    .collection-main-section .top-header-main .heading {
+    .collection-artist-list-main .top-header-main .heading {
         display: block;
     }
 
-    .collection-main-section .top-header-main .divider {
+    .collection-artist-list-main .top-header-main .divider {
         display: none;
     }
 
-    .collection-main-section .collection-container .collection-item {
+    .collection-artist-list-main .collection-container .collection-item {
         padding: 20px 0;
         gap: 10px;
     }
 
-    .collection-main-section .collection-container .collection-item .collection-item-left {
+    .collection-artist-list-main .collection-container .collection-item .collection-item-left {
         gap: 10px;
     }
 
-    .collection-main-section .collection-container .collection-item .image-main {
+    .collection-artist-list-main .collection-container .collection-item .image-main {
         width: 60px;
         min-width: 60px;
         height: 60px;
     }
 
-    .collection-main-section .collection-container .collection-item .collection-title {
+    .collection-artist-list-main .collection-container .collection-item .collection-title {
         font-size: calc(var(--font-body-scale) * 1.5rem);
     }
 
-    .collection-main-section .collection-container .collection-item .collection-item-right {
+    .collection-artist-list-main .collection-container .collection-item .collection-item-right {
         gap: 0;
     }
 
-    .collection-main-section .collection-container .collection-item .collection-button {
+    .collection-artist-list-main .collection-container .collection-item .collection-button {
         width: 60px;
         min-width: 60px;
         height: 60px;
     }
 
-    .collection-main-section .button {
+    .collection-artist-list-main .button {
         width: 100%;
         font-size: calc(var(--font-body-scale) * 1.6rem);
         display: none;
