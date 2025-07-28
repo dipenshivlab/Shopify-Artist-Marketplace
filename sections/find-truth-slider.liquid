@@ -1,0 +1,211 @@
+{% if section.settings.heading != blank or section.blocks.size > 0 %}
+  <div class="truth-container-main truth-container--{{ section.id }}">
+    {{ 'find-truth-slider.css' | asset_url | stylesheet_tag }}
+    <div class="full-width">
+      <div class="truth-container">
+        <div class="top-header-main">
+          {% if section.settings.heading != blank %}
+            <div class="heading h2">
+              {{ section.settings.heading | replace: '$divider', '<span class="divider"></span>' }}
+            </div>
+          {% endif %}
+        </div>
+        {% if section.blocks.size > 0 %}
+          <div class="collection-block-with-slider">
+            {%- if section.settings.button_label != blank or section.settings.first_block_title != blank -%}
+              <div class="truth-info truth-info-first">
+                {% if section.settings.top_svg != blank or section.settings.bottom_svg != blank %}
+                  {% if section.settings.top_svg != blank %}
+                    <div class="top-svg-content">
+                      {{ section.settings.top_svg }}
+                    </div>
+                  {% endif %}
+                  {% if section.settings.bottom_svg != blank %}
+                    <div class="bottom-svg-content">
+                      {{ section.settings.bottom_svg }}
+                    </div>
+                  {% endif %}
+                {% endif %}
+                <div class="truth-title-main">
+                  {% if section.settings.first_block_title != blank %}
+                    <div class="truth-title">
+                      {{ section.settings.first_block_title | escape }}
+                    </div>
+                  {% endif %}
+                  {% if section.settings.button_link != blank and section.settings.button_label != blank %}
+                    <a
+                      {% if section.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ section.settings.button_link }}"
+                      {% endif %}
+                      class="{% if section.settings.button_style_secondary %}button button--secondary{% else %}button--custom{% endif %}"
+                    >
+                      {{ section.settings.button_label | escape }}
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+            {%- endif -%}
+            <div class="find-truth-container swiper-container">
+              <div class="swiper-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.settings.collection_image != blank or block.settings.collection != blank %}
+                    {% assign collection = block.settings.collection %}
+                    <div class="truth-info swiper-slide">
+                      {% if collection != blank %}<a class="truth-collection-link" href="{{ collection.url }}">{% endif %}
+                      {% if block.settings.collection_image != blank %}
+                        <div class="truth-image-main">
+                          <img
+                            src="{{ block.settings.collection_image |  image_url: width: 5760 }}"
+                            alt="{{ block.settings.collection_image.alt }}"
+                            class="collection-image"
+                          >
+                        </div>
+                      {% else %}
+                        <div class="image-main">
+                          <img
+                            src="{{ collection.featured_image |  image_url: width: 5760 }}"
+                            alt="{{ collection.featured_image.alt }}"
+                            class="collection-image"
+                          >
+                        </div>
+                      {% endif %}
+                      <div class="collection-title">
+                        {{ collection.title }}
+                      </div>
+                      {% if collection != blank %}</a>{% endif %}
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        {% endif %}
+        {%- if section.settings.button_label != blank -%}
+          <a
+            {% if section.settings.button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.button_link }}"
+            {% endif %}
+            class="{% if section.settings.button_style_secondary %}button button--secondary{% else %} button--custom{% endif %} bottom-btn"
+          >
+            {{ section.settings.button_label | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.truth-container--{{ section.id }} .find-truth-container').forEach(function (container) {
+      new Swiper(container, {
+        slidesPerView: 1.5,
+        spaceBetween: 8,
+        scrollbar: {
+          el: document.querySelector('.truth-container--{{ section.id }} .swiper-scrollbar'),
+          draggable: true,
+          hide: false,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3.2,
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Find Truth Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Add $divider to add divider"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_style_secondary",
+      "default": false,
+      "label": "Button Style Secondary"
+    },
+    {
+      "type": "text",
+      "id": "first_block_title",
+      "label": "First Block Title"
+    },
+    {
+      "type": "html",
+      "id": "top_svg",
+      "label": "Top SVG"
+    },
+    {
+      "type": "html",
+      "id": "bottom_svg",
+      "label": "Bottom SVG"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "find-truth",
+      "name": "Find Truth",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "collection_image",
+          "label": "Collection Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Find Truth Slider",
+      "blocks": [
+        {
+          "type": "find-truth"
+        },
+        {
+          "type": "find-truth"
+        },
+        {
+          "type": "find-truth"
+        },
+        {
+          "type": "find-truth"
+        },
+        {
+          "type": "find-truth"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

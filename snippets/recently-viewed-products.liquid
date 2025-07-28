@@ -1,0 +1,68 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var product = {
+      id: '{{ product.id }}',
+      title: '{{ product.title }}',
+      url: '{{ product.url }}',
+      price: '{{ product.selected_or_first_available_variant.price |  money_without_trailing_zeros }}',
+      image: '{{ product.featured_image |  image_url: width: 440 }}'
+    };
+
+    var recentlyViewed = JSON.parse(localStorage.getItem('recentlyViewed')) || [];
+    recentlyViewed = recentlyViewed.filter(function(item) {
+      return item.id !== product.id;
+    });
+
+    recentlyViewed.unshift(product);
+    if (recentlyViewed.length > 10) {
+      recentlyViewed.pop();
+    }
+
+    localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+    
+    if(recentlyViewed.length > 0){
+      document.querySelector('.main-recently-view').classList.remove('hidden');
+      var recentlyViewedContainer = document.querySelector('.multiple-recently-product');
+      if (recentlyViewedContainer) {
+        recentlyViewedContainer.querySelector('.swiper-wrapper').innerHTML = recentlyViewed.map(function(item) {
+          return `
+            <div class="swiper-slide recently-viewed-item">
+              <a class="link-href" href="${item.url}">
+                <img src="${item.image}" alt="${item.title}">
+                <p class="title">${item.title}</p>
+                <p class="price">${item.price}</p>
+              </a>
+            </div>
+          `;
+        }).join('');
+      }
+
+      var galleryThumbs = new Swiper('.recently-slider', {
+        freemode:true,
+        spaceBetween: 20,
+        slidesPerView: 1.5,
+        scrollbar: {
+          el: ".recently-slider .swiper-scrollbar",
+          draggable: true,
+        },
+        breakpoints: {
+          320: {
+            freemode:true,
+            slidesPerView: 1.5,
+          },
+          768: {
+            freemode:true,
+            slidesPerView: 2.2,
+          },
+          991: {
+            freemode:true,
+            slidesPerView: 4.2,
+          }
+        }   
+      });
+    }else{
+      document.querySelector('.main-recently-view').classList.add('hidden');
+    }
+
+  });
+</script>

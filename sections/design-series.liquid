@@ -1,0 +1,200 @@
+{% if section.blocks.size > 0 %}
+  {% style %}
+    .design-series--{{ section.id }} {
+      background: {{ section.settings.bg_color }};
+    }
+  {% endstyle %}
+  {{ 'design-series.css' | asset_url | stylesheet_tag }}
+
+  <div class="design-series-main design-series--{{ section.id }}">
+    <div class="{% if section.settings.show_full_width %}full-width{% else %}page-width{% endif %}">
+      {% if section.settings.heading != blank %}
+        {% assign divider = section.settings.heading | replace: '$divider', '<span class="divider"></span>' %}
+        {% assign collection_name = divider | replace: '$collection', '<span class="collection-name">' | append: collection.title | append: '</span>' %}
+        <div class="header-wrapper top-header-main">
+          <div class="heading h2">
+            {{ collection_name }}
+          </div>
+        </div>
+      {% endif %}
+      <div class="multiple-design-series{% if section.settings.show_mobile_slider %} mobile-slider-wrapper{% endif %}">
+        <div class="swiper-wrapper {% unless section.settings.show_mobile_slider %}grid-series-item{% endunless %}">
+          {% for block in section.blocks %}
+            {% if block.settings.heading != blank and block.settings.image != blank %}
+              <div class="swiper-slide image-grid-block image-style-{{ block.settings.image_size }}">
+                <a class="series-link" href="{{ block.settings.link }}"></a>
+                {% if block.settings.image != blank %}
+                  <div class="image-wrapper">
+                    <img class="series-image mobile-hide" src="{{ block.settings.image |  image_url: width: 775 }}">
+                    {% if block.settings.mobile_image != blank %}
+                      <img class="series-image desktop-hide" src="{{ block.settings.mobile_image |  image_url: width: 775 }}">
+                    {% else %}
+                      <img class="series-image desktop-hide" src="{{ block.settings.image |  image_url: width: 775 }}">
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% if block.settings.heading != blank or block.settings.sub_heading != blank %}
+                  <div class="content-wrapper">
+                    <div class="heading-with-icon">
+                      {% if block.settings.sub_heading != blank %}
+                        <h3 class="sub-heading">{{ block.settings.sub_heading }}</h3>
+                      {% endif %}
+                      <h2 class="title">
+                        {{ block.settings.heading }}
+                      </h2>
+                      {{ 'icon-button.svg' | inline_asset_content }}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      {% if section.settings.button != blank and section.settings.link != blank %}
+        <div class="button-wrapper">
+          <a class="button" href="{{ section.settings.link }}">{{ section.settings.button }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if section.settings.show_mobile_slider %}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        let designSeriesSwiper = null;
+
+        function initDesignSeriesSwiper() {
+          const swiperSelector = '.design-series--{{ section.id }} .mobile-slider-wrapper';
+          const swiperEl = document.querySelector(swiperSelector);
+
+          if (!swiperEl) return;
+
+          if (window.innerWidth < 768) {
+            if (!designSeriesSwiper) {
+              designSeriesSwiper = new Swiper(swiperSelector, {
+                slidesPerView: 1.5,
+                spaceBetween: 8,
+              });
+            }
+          } else {
+            if (designSeriesSwiper) {
+              designSeriesSwiper.destroy(true, true);
+              designSeriesSwiper = null;
+            }
+          }
+        }
+
+        let resizeTimeout;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimeout);
+          resizeTimeout = setTimeout(initDesignSeriesSwiper, 200);
+        });
+
+        initDesignSeriesSwiper();
+      });
+    </script>
+  {% endif %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "Design Series",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_full_width",
+      "label": "Show Full Width"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_slider",
+      "label": "Slider On Mobile"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Add $divider to add divider and $collection to add collection name"
+    },
+    {
+      "type": "text",
+      "id": "button",
+      "label": "Button",
+      "default": "Explore more series"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "select",
+          "id": "image_size",
+          "options": [
+            {
+              "value": "big",
+              "label": "Big"
+            },
+            {
+              "value": "tall",
+              "label": "Tall"
+            },
+            {
+              "value": "normal",
+              "label": "Normal"
+            },
+            {
+              "value": "wild",
+              "label": "Wild"
+            }
+          ],
+          "default": "normal",
+          "label": "Image Size"
+        },
+        {
+          "type": "text",
+          "id": "sub_heading",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Design Series"
+    }
+  ]
+}
+{% endschema %}

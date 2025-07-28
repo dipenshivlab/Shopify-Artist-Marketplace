@@ -1,0 +1,228 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": false,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "collection_banner_EdDEr7": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "image": "{{ collection.image }}",
+        "sub_heading": "Soft or fierce, power is yours.",
+        "heading": "{{ collection.title }}",
+        "show_description": false
+      }
+    },
+    "design_series_NYrjzj": {
+      "type": "design-series",
+      "blocks": {
+        "image_rKMmt3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_mYaD7E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_5ad26454-528b-41f3-bfb4-cf25d466d4b1.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_bPzRXK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_49f2c611-0a72-4424-aa39-b7b27932a53f.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_JXRVEE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "image_rKMmt3",
+        "image_mYaD7E",
+        "image_bPzRXK",
+        "image_JXRVEE"
+      ],
+      "name": "Design Series",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "show_mobile_slider": true,
+        "heading": "Design series $divider $collection",
+        "button": "Explore more series",
+        "link": "shopify://collections"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "only_let_right_grid": true,
+        "image": "shopify://shop_images/circle.png",
+        "heading": "Chosen items $divider $collection",
+        "show_city_collection": false,
+        "show_sub_collection": false,
+        "heading_main": "Chosen items  $divider $collection",
+        "page_pagination": "loadMore",
+        "load_more_button": "Discover more Themes",
+        "products_per_page": 6,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-61c63495-cf83-4908-8df7-7ea511b7127d",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "sorting_type": "grid",
+        "show_product_count": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "home_collections_kwA6Ch": {
+      "type": "home-collections",
+      "blocks": {
+        "collection_4yVGBR": {
+          "type": "collection",
+          "settings": {
+            "collection": "divyanka-chandrasekaran"
+          }
+        },
+        "collection_ypk8Ur": {
+          "type": "collection",
+          "settings": {
+            "collection": "deepak-verma"
+          }
+        },
+        "collection_4Xm8d9": {
+          "type": "collection",
+          "settings": {
+            "collection": "shruti-chatterjee"
+          }
+        },
+        "collection_DEWnKW": {
+          "type": "collection",
+          "settings": {
+            "collection": "priya-sinha"
+          }
+        }
+      },
+      "block_order": [
+        "collection_4yVGBR",
+        "collection_ypk8Ur",
+        "collection_4Xm8d9",
+        "collection_DEWnKW"
+      ],
+      "name": "Collections",
+      "settings": {
+        "heading": "Minds Behind $divider Empowerment",
+        "button": "Find more Artists",
+        "link": "shopify://collections"
+      }
+    },
+    "collection_dispatch_p6FXYR": {
+      "type": "collection-dispatch",
+      "blocks": {
+        "image_tcgbyy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0b771c7d997fba75ab3fc16ea7c0604c184c6178_f52e1c56-b6fb-41ea-9b1f-96412162df39.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_xA4QAJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b6db6ca1f0b086f794280f00a635400f9cfc4897_7e19740c-33a6-4d37-924a-ee84048cc049.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_dYbmFw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1c6304148abd3eace81a57e8693c02b86ea26b47_81fad0b6-1803-4988-b477-9778bdca8dd2.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_nWJxba": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/d0efce3c3c0fce905cdecd3b457817bfe767acbc_0da9e24d-fdcc-456c-8dd9-206aaf0fcf69.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "image_tcgbyy",
+        "image_xA4QAJ",
+        "image_dYbmFw",
+        "image_nWJxba"
+      ],
+      "name": "Dispatch Banner Collection",
+      "settings": {
+        "title": "THE DISPATCH $divider No filters. just feelings"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "collection_banner_EdDEr7",
+    "design_series_NYrjzj",
+    "product-grid",
+    "home_collections_kwA6Ch",
+    "collection_dispatch_p6FXYR"
+  ]
+}

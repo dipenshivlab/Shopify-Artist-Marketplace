@@ -1,0 +1,62 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .custom-page-wrapper {
+    padding: 80px 0 122px;
+  }
+  .custom-page-wrapper .full-width {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .custom-page-wrapper .full-width .page-content {
+    font-family: var(--font-body-family);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.32px;
+    color: #11120d;
+  }
+
+  @media (max-width: 767px) {
+    .custom-page-wrapper {
+      padding: 80px 0 80px;
+    }
+    .custom-page-wrapper .full-width {
+      padding: 0 10px;
+    }
+    .custom-page-wrapper .full-width .page-content {
+      font-size: 18px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="custom-page-wrapper section-{{ section.id }}-padding">
+  <div class="full-width">
+    {% if section.settings.show_heading %}
+      <h1 class="main-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ page.title | escape }}
+      </h1>
+    {% endif %}
+    <div class="page-content rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      {{ page.content }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "Show Heading",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

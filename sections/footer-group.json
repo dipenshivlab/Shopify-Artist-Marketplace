@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "newsletter_wrKd63": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_QUcAWY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stay in the loop with all things",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_EimGfj": {
+          "type": "email_form",
+          "settings": {
+            "submit_button": "Stay informed"
+          }
+        }
+      },
+      "block_order": [
+        "heading_QUcAWY",
+        "email_form_EimGfj"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "full_width": true
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "text_mxQhq9": {
+          "type": "text",
+          "settings": {
+            "logo_image": "shopify://shop_images/logo-v1_white.svg",
+            "heading": "You’re Here for a Reason",
+            "subtext": "<p>We don’t follow trends. We follow truth. We believe in art that speaks. Loudly or softly. In a world of filters, we print what’s real. </p>"
+          }
+        },
+        "image_jUrzCR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/69badcdb32c4c01518b240fb5f94bfc2a56ff730.png",
+            "image_width": 335,
+            "alignment": "center"
+          }
+        },
+        "link_list_hQDb9L": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "text_mxQhq9",
+        "image_jUrzCR",
+        "link_list_hQDb9L"
+      ],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "email": "<p>vynemail@example.com</p>",
+        "mobile": "<p>+420 887 745 981</p>",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "newsletter_wrKd63",
+    "footer"
+  ]
+}

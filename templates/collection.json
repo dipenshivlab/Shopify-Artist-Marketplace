@@ -1,0 +1,134 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_banner_tM4VNj": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "image": "{{ collection.image }}",
+        "sub_heading": "Short Vyne Bags description",
+        "heading": "{{ collection.title }}",
+        "show_description": false
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "only_let_right_grid": false,
+        "heading": "Chosen items Empowerment",
+        "show_city_collection": false,
+        "show_sub_collection": false,
+        "heading_main": "",
+        "page_pagination": "loadMore",
+        "load_more_button": "Discover more Themes",
+        "products_per_page": 9,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-61c63495-cf83-4908-8df7-7ea511b7127d",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "sorting_type": "grid",
+        "show_product_count": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_with_slider_mAn4fp": {
+      "type": "collection-with-slider",
+      "blocks": {
+        "collection_pJcjnE": {
+          "type": "collection",
+          "settings": {
+            "collection": "women",
+            "heading": "Not just <br>Women",
+            "image": "shopify://shop_images/new_image.png"
+          }
+        },
+        "collection_N4HRpJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "love-1",
+            "heading": "",
+            "image": "shopify://shop_images/img_3df6dcfc-0158-47bd-8f58-e2427743e0e0.png"
+          }
+        },
+        "collection_4Rhyyw": {
+          "type": "collection",
+          "settings": {
+            "collection": "pride",
+            "heading": "",
+            "image": "shopify://shop_images/img_c39c1352-34d6-4246-9f5f-2962b2d406a3.png"
+          }
+        },
+        "collection_QU3MJD": {
+          "type": "collection",
+          "settings": {
+            "collection": "love",
+            "heading": "",
+            "image": "shopify://shop_images/img_c4c0a168-0a16-4735-afe2-c3e030db7669.png"
+          }
+        },
+        "collection_BRbxkt": {
+          "type": "collection",
+          "settings": {
+            "collection": "folk-heritage-stories",
+            "heading": ""
+          }
+        },
+        "collection_PmidQJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "mysticism",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_pJcjnE",
+        "collection_N4HRpJ",
+        "collection_4Rhyyw",
+        "collection_QU3MJD",
+        "collection_BRbxkt",
+        "collection_PmidQJ"
+      ],
+      "name": "Collection With Slider",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "#D8D0BD33",
+        "heading": "other stories $divider to wear"
+      }
+    }
+  },
+  "order": [
+    "collection_banner_tM4VNj",
+    "banner",
+    "product-grid",
+    "collection_with_slider_mAn4fp"
+  ]
+}

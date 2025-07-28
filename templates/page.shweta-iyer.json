@@ -1,0 +1,226 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": false
+      }
+    },
+    "testimonial_6MU4y4": {
+      "type": "testimonial",
+      "blocks": {
+        "testimonial_6YxfjQ": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_20_f04614aa-8487-4b8d-9cea-92bb7348d8de.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_LEFmFf": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/9ccd6fe6d6d0ec2b801696cc09b6976549161322.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_HenfV4": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/a6aaedef4cc198bf7e128b61dde1d17072404510.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_LLQeTH": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/599aaa666b04c7e7b6275737431a455b4684e502.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_rQtjxE": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/2fdf0384fabfa6f8b2c405a4e04e4fbb66ed638d.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_T6VUBw": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/Frame_20_f04614aa-8487-4b8d-9cea-92bb7348d8de.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_cCBbRC": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/9ccd6fe6d6d0ec2b801696cc09b6976549161322.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_qfNkD7": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/a6aaedef4cc198bf7e128b61dde1d17072404510.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_xjyAy9": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/599aaa666b04c7e7b6275737431a455b4684e502.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        },
+        "testimonial_NKx7t8": {
+          "type": "testimonial",
+          "settings": {
+            "image": "shopify://shop_images/2fdf0384fabfa6f8b2c405a4e04e4fbb66ed638d.png",
+            "text": "<p>I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.</p>",
+            "artist_name": "— Divyanka Chandrasekaran"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_6YxfjQ",
+        "testimonial_LEFmFf",
+        "testimonial_HenfV4",
+        "testimonial_LLQeTH",
+        "testimonial_rQtjxE",
+        "testimonial_T6VUBw",
+        "testimonial_cCBbRC",
+        "testimonial_qfNkD7",
+        "testimonial_xjyAy9",
+        "testimonial_NKx7t8"
+      ],
+      "name": "Testimonial",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "#000000",
+        "text_color": "#ffffff",
+        "heading": "Divyanka Chandrasekaran"
+      }
+    },
+    "dynamic_artist_series_pEezJA": {
+      "type": "dynamic-artist-series",
+      "name": "Dynamic Artist Series",
+      "settings": {
+        "heading": "top Design series $divider $artist",
+        "collection": "kaushal",
+        "button": "Explore more series",
+        "link": "shopify://collections"
+      }
+    },
+    "design_series_iCaY6A": {
+      "type": "design-series",
+      "blocks": {
+        "image_MMTBXx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections/empowerment"
+          }
+        },
+        "image_7AQnrz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_5ad26454-528b-41f3-bfb4-cf25d466d4b1.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections/empowerment"
+          }
+        },
+        "image_zeaMi9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_49f2c611-0a72-4424-aa39-b7b27932a53f.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections/empowerment"
+          }
+        },
+        "image_PQRERC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_8bba10cb-8f88-4665-8187-7e9cc16c22e0.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections/empowerment"
+          }
+        }
+      },
+      "block_order": [
+        "image_MMTBXx",
+        "image_7AQnrz",
+        "image_zeaMi9",
+        "image_PQRERC"
+      ],
+      "disabled": true,
+      "name": "Design Series",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "show_mobile_slider": false,
+        "heading": "top Design series $divider from Divyanka",
+        "button": "Explore more series",
+        "link": "shopify://collections"
+      }
+    },
+    "trending_product_twH4nK": {
+      "type": "trending-product",
+      "name": "Trending Product",
+      "settings": {
+        "collection": "kaushal",
+        "products_to_show": 12,
+        "title": "Trending items $divider $artist",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "testimonial_6MU4y4",
+    "dynamic_artist_series_pEezJA",
+    "design_series_iCaY6A",
+    "trending_product_twH4nK"
+  ]
+}

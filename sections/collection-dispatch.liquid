@@ -1,0 +1,129 @@
+{{ 'collection-dispatch.css' | asset_url | stylesheet_tag }}
+<section class="dispatch-banner">
+  {% if section.settings.title != blank %}
+    <div class="top-header-main">
+      <h2 class="heading h2">{{ section.settings.title | replace: '$divider', '<span class="divider"></span>' }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="dispatch-images dispatch-swiper-container">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="dispatch-image swiper-slide">
+          {% if block.settings.image %}
+            <img class="mobile-hide" src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading | escape }}">
+            {% if block.settings.mobile_image != blank %}
+              <img class="desktop-hide" src="{{ block.settings.mobile_image | img_url: '800x' }}" alt="{{ block.settings.heading | escape }}">
+            {% else %}
+              <img class="desktop-hide" src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.heading | escape }}">
+            {% endif %}
+          {% endif %}
+          {% if block.settings.heading or block.settings.button_text or block.settings.text %}
+            <div class="dispatch-content">
+              {% if block.settings.heading %}
+                <h3 class="dispatch-heading h2">{{ block.settings.heading }}</h3>
+              {% endif %}
+              {% if block.settings.text != blank %}
+                <p class="text">{{ block.settings.text }}</p>
+              {% endif %}
+              {% if block.settings.button_text and block.settings.button_link %}
+                <a href="{{ block.settings.button_link }}" class="dispatch-button">{{ block.settings.button_text }}</a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="swiper-scrollbar swiper-scrollbar-horizontal" style="transition-duration: 0ms;">
+      <div
+        class="swiper-scrollbar-drag"
+        style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms; width: 108.445px;"
+      ></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dispatch Banner",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Left Title",
+      "default": "THE DISPATCH",
+      "info": "Add $divider to add divider"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Dispatch Banner",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+{% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth <= 768) {
+      const swiper = new Swiper('.dispatch-swiper-container', {
+        slidesPerView: 1.6,
+        spaceBetween: 8,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        scrollbar: {
+          el: '.dispatch-swiper-container .swiper-scrollbar',
+          draggable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    }
+  });
+{% endjavascript %}

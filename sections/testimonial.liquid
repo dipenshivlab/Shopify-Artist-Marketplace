@@ -1,0 +1,161 @@
+{% if section.blocks.size > 0 %}
+  {% style %}
+    .testimonial--{{ section.id }} {
+      background: {{ section.settings.bg_color }};
+      color: {{ section.settings.text_color }};
+    }
+    .testimonial--{{ section.id }} .heading {
+      color: {{ section.settings.text_color }};
+    }
+  {% endstyle %}
+  {{ 'testimonial.css' | asset_url | stylesheet_tag }}
+
+  <div class="main-testimonial testimonial--{{ section.id }}">
+    <div class="{% if section.settings.show_full_width %}full-width{% else %}page-width{% endif %}">
+      {% if section.settings.heading != blank %}
+        <h2 class="heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="multiple-testimonial-list">
+        <div class="testimonial-image-thumbs">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide testimonial-image-content">
+                <img class="testimonial-image" src="{{ block.settings.image |  image_url: width: 600 }}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="testimonial-text-slider">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide testimonial-text-content">
+                <div class="testimonial-text">
+                  <span class="quote-svg">
+                    {{ 'icon-quote.svg' | inline_asset_content }}
+                  </span>
+                  {{ block.settings.text }}
+                </div>
+                <p class="artist-name">{{ block.settings.artist_name }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var galleryThumbs = new Swiper('.testimonial--{{ section.id }} .testimonial-image-thumbs', {
+        centeredSlides: true,
+        freemode: true,
+        slideToClickedSlide: true,
+        loop: true,
+        slidesPerView: 'auto',
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 60,
+          depth: 100,
+          modifier: 1.5,
+          slideShadows: false,
+        },
+        breakpoints: {
+          320: {
+            freeMode: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 60,
+              depth: 100,
+              modifier: 1.5,
+              slideShadows: false,
+            },
+          },
+          1023: {
+            freeMode: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 100,
+              depth: 200,
+              modifier: 1.5,
+              slideShadows: false,
+            },
+          },
+        },
+      });
+
+      var galleryTop = new Swiper('.testimonial--{{ section.id }} .testimonial-text-slider', {
+        centeredSlides: true,
+        slidesPerView: 1,
+        loop: true,
+        freemode: true,
+        spaceBetween: 20,
+        loopedSlides: 5,
+      });
+
+      galleryTop.controller.control = galleryThumbs;
+      galleryThumbs.controller.control = galleryTop;
+    });
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Testimonial",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_full_width",
+      "label": "Show Full Width"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "artist_name",
+          "label": "Artist Name",
+          "default": "— Divyanka Chandrasekaran"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial"
+    }
+  ]
+}
+{% endschema %}

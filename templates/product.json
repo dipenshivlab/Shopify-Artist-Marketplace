@@ -1,0 +1,104 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_price": true,
+            "show_description": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity": true,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "color_scheme": "scheme-1",
+        "media_size": "full",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "gallery_layout": "slider",
+        "mobile_thumbnails": "columns",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product_banner_with_content_DJGV33": {
+      "type": "product-banner-with-content",
+      "name": "Product Meta Banner",
+      "settings": {
+        "show_full_width": true
+      }
+    },
+    "product_info_with_text_zmmMBE": {
+      "type": "product-info-with-text",
+      "name": "Product Info With Text",
+      "settings": {
+        "show_full_width": true,
+        "button": "Own nomad bag",
+        "link": "shopify://collections"
+      }
+    },
+    "recently_viewed_products_6XheqY": {
+      "type": "recently-viewed-products",
+      "name": "Recently View",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "#FFFFFF",
+        "heading": "Recently seen $divider Products"
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Trending items $divider from Divyanka",
+        "products_to_show": 10,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_banner_with_content_DJGV33",
+    "product_info_with_text_zmmMBE",
+    "recently_viewed_products_6XheqY",
+    "related-products"
+  ]
+}

@@ -1,0 +1,43 @@
+{% if product.metafields.custom.banner_with_content != blank %}
+  {{ 'product-banner-with-content.css' | asset_url | stylesheet_tag }}
+  {% assign productMetaBaner = product.metafields.custom.banner_with_content.value %}
+  <div class="product-banner-with-content product-banner-with-content--{{ section.id }}">
+    <div class="{% if section.settings.show_full_width %}full-width{% else %}page-width{% endif %}">
+      <div class="image-with-content-wrappers">
+        {% if productMetaBaner.image != blank %}
+          <div class="image-wrapper">
+            <img src="{{ productMetaBaner.image |  image_url: width: 1920 }}">
+          </div>
+        {% endif %}
+        {% if productMetaBaner.heading != blank or productMetaBaner.text != blank %}
+          <div class="content-wrapper">
+            {% if productMetaBaner.heading != blank %}
+              <h2 class="heading">{{ productMetaBaner.heading }}</h2>
+            {% endif %}
+            {% if productMetaBaner.text != blank %}
+              <p class="text">{{ productMetaBaner.text }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Meta Banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_full_width",
+      "label": "Show Full Width"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Meta Banner"
+    }
+  ]
+}
+{% endschema %}

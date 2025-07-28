@@ -1,0 +1,278 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- paginate blog.articles by 3 -%}
+  <div class="main-blog main-blog-list-custom full-width section-{{ section.id }}-padding">
+    {% if section.settings.heading != blank %}
+      <h1 class="title--primary-main{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ section.settings.heading }}
+      </h1>
+    {% else %}
+      <h1 class="title--primary{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+        {{ blog.title | escape }}
+      </h1>
+    {% endif %}
+
+    <div class="blog-articles blog-style-{{  section.settings.layout }} {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}">
+      {%- for article in blog.articles -%}
+        {% if section.settings.show_marquee %}
+          {% if section.settings.marquee_index == forloop.index %}
+          
+            {% if section.blocks.size > 0 %}
+              <div class="blog-marquee">
+                <div class="blog-marquee-main">
+                  {%- capture marqee_content -%}
+                  {% for block in section.blocks %}
+                    {% if block.settings.text != blank %}
+                      <div class="text">{{ block.settings.text }}</div>
+                    {% endif %}
+                  {% endfor %}
+                  {%- endcapture -%}
+                  {% for i in (1..4) %}
+                    {{ marqee_content }}
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+        <div
+          class="blog-articles__article article{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          {% if settings.animations_reveal_on_scroll %}
+            data-cascade
+            style="--animation-order: {{ forloop.index }};"
+          {% endif %}
+        >
+          {%- render 'article-card',
+            article: article,
+            media_height: section.settings.image_height,
+            media_aspect_ratio: article.image.aspect_ratio,
+            show_image: section.settings.show_image,
+            show_date: section.settings.show_date,
+            show_author: section.settings.show_author,
+            show_excerpt: true,
+            show_discover_more: section.settings.show_discover_more,
+            discover_more_button_label: section.settings.discover_more_button_label
+          -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="show-more-container-main">
+      {%- if paginate.pages > 1 -%}
+        {% comment %} {%- render 'pagination', paginate: paginate -%} {% endcomment %}
+        <button class="show-more-button button" data-next-url="{{ paginate.next.url }}">Discover more Blogs</button>
+        <span class="divider"></span>
+      {%- endif -%}
+      <div class="paginate-count">
+        {% assign first_product = paginate.current_offset | plus: 1 %}
+        {% assign last_product = paginate.current_offset | plus: paginate.items %}
+
+        <span id="article-count"></span>
+        / {{ blog.articles_count }}
+      </div>
+    </div>
+  </div>
+{%- endpaginate -%}
+<script>
+  function updateCollectionCount(spanId = 'article-count', itemClass = 'blog-articles__article') {
+    var count = document.querySelectorAll('.' + itemClass).length;
+    var countSpan = document.getElementById(spanId);
+    if (countSpan) {
+      countSpan.textContent = count;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    updateCollectionCount();
+    const showMoreButton = document.querySelector('.show-more-container-main .show-more-button');
+    const articleGrid = document.querySelector('.blog-articles');
+
+    if (showMoreButton && articleGrid) {
+      showMoreButton.addEventListener('click', async function () {
+        const nextUrl = this.dataset.nextUrl;
+        console.log("nextUrl", nextUrl);
+        if (!nextUrl) return;
+
+        try {
+          showMoreButton.disabled = true;
+          showMoreButton.textContent = 'Loading...';
+
+          const response = await fetch(nextUrl);
+          const html = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+
+          const newArticles = doc.querySelector('.blog-articles').innerHTML;
+          articleGrid.insertAdjacentHTML('beforeend', newArticles);
+
+          const nextPageButton = doc.querySelector('.show-more-button');
+          if (nextPageButton && nextPageButton.dataset.nextUrl) {
+            showMoreButton.dataset.nextUrl = nextPageButton.dataset.nextUrl;
+            showMoreButton.disabled = false;
+            showMoreButton.textContent = 'Discover more Blogs';
+          } else {
+            showMoreButton.remove();
+            setTimeout(() => {
+              updateCollectionCount();
+              console.log('worked..');
+            }, 1000);
+          }
+        } catch (error) {
+          console.error('Error loading more articles:', error);
+          showMoreButton.disabled = false;
+          showMoreButton.textContent = 'Discover more Blogs';
+        }
+      });
+    }
+  });
+</script>
+{% schema %}
+{
+  "name": "t:sections.main-blog.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:sections.main-blog.settings.layout.options__1.label"
+        },
+        {
+          "value": "collage",
+          "label": "t:sections.main-blog.settings.layout.options__2.label"
+        },
+        {
+          "value": "list",
+          "label": "List"
+        }
+      ],
+      "default": "collage",
+      "label": "t:sections.main-blog.settings.layout.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-blog.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.main-blog.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.main-blog.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.main-blog.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.main-blog.settings.image_height.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "default": false,
+      "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_discover_more",
+      "default": false,
+      "label": "Discover More Button"
+    },
+    {
+      "type": "text",
+      "id": "discover_more_button_label",
+      "label": "Discover More Button Label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_marquee",
+      "default": false,
+      "label": "Show Marquee"
+    },
+    {
+      "type": "number",
+      "id": "marquee_index",
+      "label": "Marquee Index"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Marquee Text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

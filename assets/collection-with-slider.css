@@ -1,0 +1,183 @@
+.collection-with-slider-main .full-width {
+  padding: 0 20px;
+  overflow: hidden;
+  margin-bottom: 160px;
+}
+
+.collection-with-slider-main .top-header-main {
+  margin-bottom: 60px;
+}
+
+.collection-with-slider-main .top-header-main .heading {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 64px;
+  font-family: var(--font-heading-family);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.collection-with-slider-main .top-header-main .divider {
+  flex: 1;
+  width: 100%;
+  height: 2px;
+  background-color: #11120D;
+  display: inline-flex;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-items a.collection-link {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-image-with-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-items .collection-image-wrapper:after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 20%) 0%);
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-items .collection-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 100%;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-items img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-content .title {
+  font-size: 28px;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: #FFFAF4;
+  margin: 0;
+}
+
+.collection-with-slider-main .collection-items .collection-image-with-content .collection-content {
+  position: absolute;
+  display: flex;
+  width: calc(100% - 16px);
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 8px;
+  bottom: 0;
+  z-index: 2;
+}
+
+.collection-with-slider-main .swiper-horizontal .swiper-scrollbar {
+  height: 12px !important;
+  background: #56544866;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+  left: 0;
+  display: flex;
+  width: 100%;
+  padding: 2px;
+}
+
+.collection-with-slider-main .swiper-horizontal .swiper-scrollbar-drag {
+  display: block !important;
+  background: #565448CC;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-items:hover .link-svg {
+  opacity: 1;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-items .link-svg {
+  max-width: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
+.collection-with-slider-main .multiple-collection-lists .collection-items .link-svg svg {
+  max-width: 48px;
+  width: 100%;
+  height: auto;
+}
+
+@media(max-width: 1200px) {
+  .collection-with-slider-main .top-header-main .heading {
+    font-size: 50px;
+  }
+}
+
+@media(max-width: 1023px) {
+  .collection-with-slider-main .full-width {
+    margin-bottom: 140px;
+  }
+
+  .collection-with-slider-main .top-header-main {
+    margin-bottom: 40px;
+  }
+
+  .collection-with-slider-main .top-header-main .heading {
+    font-size: 36px;
+  }
+}
+
+@media(max-width: 991px) {
+  .collection-with-slider-main .full-width {
+    margin-bottom: 110px;
+  }
+}
+
+@media(max-width: 767px) {
+  .collection-with-slider-main .full-width {
+    padding: 0 10px;
+    margin-bottom: 80px;
+  }
+
+  .collection-with-slider-main .top-header-main {
+    margin-bottom: 20px;
+  }
+
+  .collection-with-slider-main .top-header-main .heading {
+    display: block;
+    font-size: 20px;
+  }
+
+  .collection-with-slider-main .top-header-main .divider {
+    display: none;
+  }
+
+  .collection-with-slider-main .multiple-collection-lists .collection-content .title {
+    font-size: 15px;
+  }
+
+  .collection-with-slider-main .multiple-collection-lists .collection-items .link-svg {
+    display: none;
+  }
+}

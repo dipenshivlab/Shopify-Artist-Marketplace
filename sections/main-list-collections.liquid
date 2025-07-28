@@ -1,0 +1,239 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+  <h1 class="title title--primary inline-richtext{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ section.settings.title }}
+  </h1>
+  {%- liquid
+    case section.settings.sort
+      when 'products_high', 'products_low'
+        assign collections = collections | sort: 'all_products_count'
+      when 'date', 'date_reversed'
+        assign collections = collections | sort: 'published_at'
+    endcase
+
+    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+      assign collections = collections | reverse
+    endif
+
+    assign moduloResult = 28 | modulo: section.settings.columns_desktop
+    assign paginate_by = 30
+    if moduloResult == 0
+      assign paginate_by = 28
+    endif
+  -%}
+  {%- paginate collections by 5 -%}
+    <ul class="collection-list grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down" role="list">
+      {% comment %} {%- for collection in collections -%}
+                                                                                                                                                                                                                                                                                                                <li
+                                                                                                                                                                                                                                                                                                                  class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                                                                                                                                                                                                                                                                                                                  {% if settings.animations_reveal_on_scroll %}
+                                                                                                                                                                                                                                                                                                                  data-cascade
+                                                                                                                                                                                                                                                                                                                  style="--animation-order: {{ forloop.index }};"
+                                                                                                                                                                                                                                                                                                                  {% endif %}>
+                                                                                                                                                                                                                                                                                                                  {% render 'card-collection'
+                                                                                                                                                                                                                                                                                                                    ,
+                                                                                                                                                                                                                                                                                                         card_collection: collection
+                                                                                                                                                                                                                                                                                                                    ,
+                                                                                                                                                                                                                                                                                                         media_aspect_ratio: section.settings.image_ratio
+                                                                                                                                                                                                                                                                                                                    ,
+                                                                                                                                                                                                                                                                                                         columns: 3
+                                                                                                                                                                                                                                                                                                                  %}
+                                                                                                                                                                                                                                                                                                                </li>
+                                                                                                                                                                                                                                    {%- endfor -%} {% endcomment %}
+      {% for collection in collections %}
+        {% assign index = forloop.index0 %}
+        {% assign mod = index | modulo: 3 %}
+
+        {% if mod == 0 %}
+          <div class="collection-row">
+        {% endif %}
+
+        <div class="collection-item">
+          {% if collection.image %}
+            <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title }}">
+          {% endif %}
+          <div class="collection-information">
+            <div class="col-title">
+              <h3>{{ collection.title }}</h3>
+            </div>
+            {% comment %} <div class="col-sub">
+                                                                                                                                                                                                                                                                                                                                                                                          <span>This theme speaks</span>
+                                                                                                                                                                                                                                                                                                                                    </div> {% endcomment %}
+            <span class="col-arrow">
+              {{ 'arrow-up-right.svg' | inline_asset_content }}
+            </span>
+          </div>
+
+        </div>
+
+        {% if mod == 2 or forloop.last %}
+          </div>
+        {% endif %}
+      {% endfor %}
+
+
+    </ul>
+    {% comment %} {% render 'pagination', paginate: paginate %}{% endcomment %}
+
+    {%- if paginate.pages > 1 -%}
+      <div class="text-center show-more-container">
+        <button class="show-more-button button" data-next-url="{{ paginate.next.url }}">
+          Discover more Themes
+        </button>
+      </div>
+    {%- endif -%}
+
+    <div class="paginate-count">
+      {% assign first_product = paginate.current_offset | plus: 1 %}
+      {% assign last_product = paginate.current_offset | plus: paginate.items %}
+
+      <span id="collection-count"></span>
+      / {{ collections.size }}
+    </div>
+
+
+  {%- endpaginate -%}
+
+
+</div>
+
+<script>
+  function updateCollectionCount(spanId = 'collection-count', itemClass = 'collection-item') {
+  var count = document.querySelectorAll('.' + itemClass).length;
+  var countSpan = document.getElementById(spanId);
+  if (countSpan) {
+    countSpan.textContent = count;
+  }
+  }
+  
+  document.addEventListener('DOMContentLoaded', function () {
+  updateCollectionCount(); 
+    const showMoreButton = document.querySelector('.show-more-container .show-more-button');
+    const articleGrid = document.querySelector('.collection-list');
+  
+    if (showMoreButton && articleGrid) {
+      showMoreButton.addEventListener('click', async function () {
+        const nextUrl = this.dataset.nextUrl;
+        if (!nextUrl) return;
+  
+        try {
+          showMoreButton.disabled = true;
+          showMoreButton.textContent = 'Loading...';
+  
+          const response = await fetch(nextUrl);
+          const html = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+  
+          const newArticles = doc.querySelector('.collection-list').innerHTML;
+          articleGrid.insertAdjacentHTML('beforeend', newArticles);
+  
+          const nextPageButton = doc.querySelector('.show-more-button');
+          if (nextPageButton && nextPageButton.dataset.nextUrl) {
+            showMoreButton.dataset.nextUrl = nextPageButton.dataset.nextUrl;
+            showMoreButton.disabled = false;
+            showMoreButton.textContent = 'Load More';
+            
+          } else {
+            showMoreButton.remove();
+              setTimeout(() => {
+              updateCollectionCount(); 
+              console.log('worked..');
+              }, 300);
+          }
+        } catch (error) {
+          console.error('Error loading more products:', error);
+          showMoreButton.disabled = false;
+          showMoreButton.textContent = 'Load More';
+        }
+      });
+    }
+  });
+</script>
+{% schema %}
+  {
+    "name": "t:sections.main-list-collections.name",
+    "class": "section",
+    "settings": [
+      {
+        "type": "inline_richtext",
+        "id": "title",
+        "label": "t:sections.main-list-collections.settings.title.label",
+        "default": "t:sections.main-list-collections.settings.title.default"
+      },
+      {
+        "type": "select",
+        "id": "sort",
+        "options": [
+          {
+            "value": "alphabetical",
+            "label": "t:sections.main-list-collections.settings.sort.options__1.label"
+          },
+          {
+            "value": "alphabetical_reversed",
+            "label": "t:sections.main-list-collections.settings.sort.options__2.label"
+          },
+          {
+            "value": "date_reversed",
+            "label": "t:sections.main-list-collections.settings.sort.options__3.label"
+          },
+          {
+            "value": "date",
+            "label": "t:sections.main-list-collections.settings.sort.options__4.label"
+          }, {
+            "value": "products_high",
+            "label": "t:sections.main-list-collections.settings.sort.options__5.label"
+          }, {
+            "value": "products_low",
+            "label": "t:sections.main-list-collections.settings.sort.options__6.label"
+          }
+        ],
+        "default": "alphabetical",
+        "label": "t:sections.main-list-collections.settings.sort.label"
+      },
+      {
+        "type": "select",
+        "id": "image_ratio",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
+          }, {
+            "value": "portrait",
+            "label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
+          }, {
+            "value": "square",
+            "label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
+          }
+        ],
+        "default": "adapt",
+        "label": "t:sections.main-list-collections.settings.image_ratio.label"
+      },
+      {
+        "type": "range",
+        "id": "columns_desktop",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 3,
+        "label": "t:sections.main-list-collections.settings.columns_desktop.label"
+      }, {
+        "type": "select",
+        "id": "columns_mobile",
+        "options": [
+          {
+            "value": "1",
+            "label": "t:sections.main-list-collections.settings.columns_mobile.options__1.label"
+          }, {
+            "value": "2",
+            "label": "t:sections.main-list-collections.settings.columns_mobile.options__2.label"
+          }
+        ],
+        "default": "2",
+        "label": "t:sections.main-list-collections.settings.columns_mobile.label"
+      }
+    ]
+  }
+{% endschema %}

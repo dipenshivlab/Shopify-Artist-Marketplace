@@ -1,0 +1,416 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_video_slider_33wqr6": {
+      "type": "image-with-video-slider",
+      "blocks": {
+        "image_with_video_iKy6jc": {
+          "type": "image-with-video",
+          "settings": {
+            "main_image": "shopify://shop_images/ed17bf1116cb0b9d032641d315438867018b52d4.png",
+            "text": "BRAND video OF your NEW DROP",
+            "bottom_text": "Announcment of drop",
+            "button_link": "#"
+          }
+        },
+        "image_with_video_c6k7JE": {
+          "type": "image-with-video",
+          "settings": {
+            "main_image": "shopify://shop_images/ed17bf1116cb0b9d032641d315438867018b52d4.png",
+            "text": "BRAND video OF your NEW DROP",
+            "bottom_text": "Announcment of drop",
+            "button_link": "#"
+          }
+        },
+        "image_with_video_6iH8Cg": {
+          "type": "image-with-video",
+          "settings": {
+            "main_image": "shopify://shop_images/ed17bf1116cb0b9d032641d315438867018b52d4.png",
+            "text": "BRAND video OF your NEW DROP",
+            "bottom_text": "Announcment of drop",
+            "button_link": "#"
+          }
+        },
+        "image_with_video_TDh7yD": {
+          "type": "image-with-video",
+          "settings": {
+            "video_url": "shopify://files/videos/shopify.mp4",
+            "text": "BRAND video OF your NEW DROP",
+            "bottom_text": "Announcment of drop",
+            "button_link": "#"
+          }
+        },
+        "top_image_dLNmaj": {
+          "type": "top-image",
+          "settings": {
+            "top_image": "shopify://shop_images/91f295e538422146f46cfbb65f49b690655f7709.jpg"
+          }
+        },
+        "top_image_AJNEEg": {
+          "type": "top-image",
+          "settings": {
+            "top_image": "shopify://shop_images/5aab5459786b226d5d70e39a1dfa0e817fee1e4d.jpg"
+          }
+        },
+        "top_image_qqTXmN": {
+          "type": "top-image",
+          "settings": {
+            "top_image": "shopify://shop_images/29cfbc101bccdb559776e3f4397a4acc62b27327.jpg"
+          }
+        },
+        "top_image_rfKyp9": {
+          "type": "top-image",
+          "settings": {
+            "top_image": "shopify://shop_images/e483cef6f822c06a7b0a15538cc92ed5fe5d8d9f.jpg"
+          }
+        },
+        "top_image_kPCeWG": {
+          "type": "top-image",
+          "settings": {
+            "top_image": "shopify://shop_images/ed1034b5474524240c9f0d48b595eb03d91675ca.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_video_iKy6jc",
+        "image_with_video_c6k7JE",
+        "image_with_video_6iH8Cg",
+        "image_with_video_TDh7yD",
+        "top_image_dLNmaj",
+        "top_image_AJNEEg",
+        "top_image_qqTXmN",
+        "top_image_rfKyp9",
+        "top_image_kPCeWG"
+      ],
+      "name": "Image with Video Slider",
+      "settings": {
+        "heading": "This is Vyne",
+        "text": "We celebrate plurality",
+        "divider": true,
+        "pagination": true
+      }
+    },
+    "stories_d7ENqJ": {
+      "type": "stories",
+      "blocks": {
+        "story_qG3tXh": {
+          "type": "story",
+          "settings": {
+            "collection": "mysticism",
+            "show_logo_image": false,
+            "mandatory_class": "big",
+            "button_label": "Explore category"
+          }
+        },
+        "story_B94t6i": {
+          "type": "story",
+          "settings": {
+            "collection": "",
+            "collection_image": "shopify://shop_images/circle.svg",
+            "show_logo_image": true,
+            "mandatory_class": "normal",
+            "button_label": "Explore category"
+          }
+        },
+        "story_NVYGXf": {
+          "type": "story",
+          "settings": {
+            "collection": "love",
+            "show_logo_image": false,
+            "mandatory_class": "normal",
+            "button_label": "Explore category"
+          }
+        },
+        "story_w3C9Pf": {
+          "type": "story",
+          "settings": {
+            "collection": "folk-heritage-stories",
+            "show_logo_image": false,
+            "mandatory_class": "wide",
+            "button_label": "Explore category"
+          }
+        },
+        "story_GcXVCe": {
+          "type": "story",
+          "settings": {
+            "collection": "pride",
+            "show_logo_image": false,
+            "mandatory_class": "wide",
+            "button_label": "Explore category"
+          }
+        },
+        "story_brXWJE": {
+          "type": "story",
+          "settings": {
+            "collection": "women",
+            "show_logo_image": false,
+            "mandatory_class": "big",
+            "button_label": "Explore category"
+          }
+        },
+        "story_Hfdhx7": {
+          "type": "story",
+          "settings": {
+            "collection": "love-1",
+            "show_logo_image": false,
+            "mandatory_class": "normal",
+            "button_label": "Explore category"
+          }
+        },
+        "story_TghYDW": {
+          "type": "story",
+          "settings": {
+            "collection": "",
+            "collection_image": "shopify://shop_images/circle.svg",
+            "show_logo_image": true,
+            "mandatory_class": "normal",
+            "button_label": "Explore category"
+          }
+        }
+      },
+      "block_order": [
+        "story_qG3tXh",
+        "story_B94t6i",
+        "story_NVYGXf",
+        "story_w3C9Pf",
+        "story_GcXVCe",
+        "story_brXWJE",
+        "story_Hfdhx7",
+        "story_TghYDW"
+      ],
+      "name": "Stories",
+      "settings": {
+        "heading": "Stories You Can $divider Carry",
+        "button_label": "Discover more Themes",
+        "button_link": "shopify://collections",
+        "button_style_secondary": true
+      }
+    },
+    "home_collections_m97Qrx": {
+      "type": "home-collections",
+      "blocks": {
+        "collection_jj8dQ9": {
+          "type": "collection",
+          "settings": {
+            "collection": "divyanka-chandrasekaran"
+          }
+        },
+        "collection_CCdkUp": {
+          "type": "collection",
+          "settings": {
+            "collection": "deepak-verma"
+          }
+        },
+        "collection_xtJ4AJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "shruti-chatterjee"
+          }
+        },
+        "collection_8kiGV4": {
+          "type": "collection",
+          "settings": {
+            "collection": "priya-sinha"
+          }
+        },
+        "collection_JNx37h": {
+          "type": "collection",
+          "settings": {
+            "collection": "rina-patel"
+          }
+        },
+        "collection_tT9GcN": {
+          "type": "collection",
+          "settings": {
+            "collection": "manish-venkataraman"
+          }
+        }
+      },
+      "block_order": [
+        "collection_jj8dQ9",
+        "collection_CCdkUp",
+        "collection_xtJ4AJ",
+        "collection_8kiGV4",
+        "collection_JNx37h",
+        "collection_tT9GcN"
+      ],
+      "name": "Collections",
+      "settings": {
+        "heading": "The Mind Behind $divider The Mood",
+        "button": "Find more Artists",
+        "link": ""
+      }
+    },
+    "marquee_NbgPgR": {
+      "type": "marquee",
+      "blocks": {
+        "first_marquee_VaYakx": {
+          "type": "first_marquee",
+          "settings": {
+            "text_one": "New drop"
+          }
+        },
+        "first_marquee_AewLWz": {
+          "type": "first_marquee",
+          "settings": {
+            "text_one": "New drop"
+          }
+        },
+        "first_marquee_hHyMyX": {
+          "type": "first_marquee",
+          "settings": {
+            "text_one": "New drop"
+          }
+        },
+        "second_marquee_nheHKi": {
+          "type": "second_marquee",
+          "settings": {
+            "text_two": "2025 collection"
+          }
+        },
+        "second_marquee_WAMajn": {
+          "type": "second_marquee",
+          "settings": {
+            "text_two": "2025 collection"
+          }
+        },
+        "second_marquee_BniAgw": {
+          "type": "second_marquee",
+          "settings": {
+            "text_two": "2025 collection"
+          }
+        }
+      },
+      "block_order": [
+        "first_marquee_VaYakx",
+        "first_marquee_AewLWz",
+        "first_marquee_hHyMyX",
+        "second_marquee_nheHKi",
+        "second_marquee_WAMajn",
+        "second_marquee_BniAgw"
+      ],
+      "name": "Marquee",
+      "settings": {
+        "bg_color": "",
+        "text_direction_m1": "left-to-right",
+        "text_direction_m2": "right-to-left"
+      }
+    },
+    "find_truth_slider_TmAcRK": {
+      "type": "find-truth-slider",
+      "blocks": {
+        "find_truth_DQcLmY": {
+          "type": "find-truth",
+          "settings": {
+            "collection": "bags"
+          }
+        },
+        "find_truth_fAGmWP": {
+          "type": "find-truth",
+          "settings": {
+            "collection": "tshirts"
+          }
+        },
+        "find_truth_cKD7QF": {
+          "type": "find-truth",
+          "settings": {
+            "collection": "laptop-cases"
+          }
+        },
+        "find_truth_V8gaCW": {
+          "type": "find-truth",
+          "settings": {
+            "collection": "pride"
+          }
+        }
+      },
+      "block_order": [
+        "find_truth_DQcLmY",
+        "find_truth_fAGmWP",
+        "find_truth_cKD7QF",
+        "find_truth_V8gaCW"
+      ],
+      "name": "Find Truth Slider",
+      "settings": {
+        "heading": "Find a Truth $divider in a print",
+        "button_label": "Explore categories",
+        "button_link": "#",
+        "button_style_secondary": true,
+        "first_block_title": "Explore more categories",
+        "top_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"187\" height=\"211\" viewbox=\"0 0 187 211\" fill=\"none\">\n  <g clip-path=\"url(#clip0_359_8331)\">\n    <path d=\"M60.9199 171.836C60.9199 199.673 51.7245 206.584 46.1689 211C46.5521 210.616 59.1958 211 61.4946 210.616C69.5406 210.232 78.9276 200.057 83.7168 192.954C84.6747 191.61 85.441 190.266 86.2073 188.73C88.8893 182.971 90.2302 176.251 90.6134 169.532C90.9965 162.237 90.9965 154.942 90.805 147.647L93.1038 65.6715C87.9314 58.7603 60.7283 23.2441 60.7283 23.2441V171.836H60.9199Z\" fill=\"#11120D\" fill-opacity=\"0.1\"></path>\n    <path d=\"M159.195 -30.8935C152.299 -23.7903 153.257 -13.0395 152.874 -8.048C152.49 -2.86457 153.448 51.2735 153.448 51.2735C130.843 46.858 118.774 23.2446 123.755 1.74292C130.077 -25.7101 161.494 -59.6903 176.437 -80.0401L127.012 -81C119.732 -71.977 91.954 -31.0855 89.0805 -26.286L49.0421 -80.0401H0L172.031 146.495H185.249V-8.62394C185.249 -28.9737 194.444 -33.5812 199.808 -36.6529C199.425 -36.4609 169.732 -42.0283 159.004 -30.8935H159.195Z\" fill=\"#11120D\" fill-opacity=\"0.1\"></path>\n  </g>\n  <defs>\n    <clippath id=\"clip0_359_8331\">\n      <rect width=\"200\" height=\"292\" fill=\"white\" transform=\"translate(0 -81)\"></rect>\n    </clippath>\n  </defs>\n</svg>",
+        "bottom_svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"178\" height=\"210\" viewbox=\"0 0 178 210\" fill=\"none\">\n  <g clip-path=\"url(#clip0_359_8328)\">\n    <path d=\"M38.9197 252.836C38.9197 280.673 29.7243 287.584 24.1687 292C24.5518 291.616 37.1955 292 39.4944 291.616C47.5403 291.232 56.9273 281.057 61.7166 273.954C62.6744 272.61 63.4407 271.266 64.207 269.73C66.889 263.971 68.23 257.251 68.6131 250.532C68.9963 243.237 68.9963 235.942 68.8047 228.647L71.1036 146.671C65.9311 139.76 38.7281 104.244 38.7281 104.244V252.836H38.9197Z\" fill=\"#11120D\" fill-opacity=\"0.1\"></path>\n    <path d=\"M137.195 50.1065C130.299 57.2097 131.257 67.9605 130.874 72.952C130.49 78.1354 131.448 132.273 131.448 132.273C108.843 127.858 96.7739 104.245 101.755 82.7429C108.077 55.2899 139.494 21.3097 154.437 0.959895L105.012 0C97.7318 9.02301 69.954 49.9145 67.0805 54.714L27.0421 0.959895H-22L150.031 227.495H163.249V72.3761C163.249 52.0263 172.444 47.4188 177.808 44.3471C177.425 44.5391 147.732 38.9717 137.004 50.1065H137.195Z\" fill=\"#11120D\" fill-opacity=\"0.1\"></path>\n  </g>\n  <defs>\n    <clippath id=\"clip0_359_8328\">\n      <rect width=\"200\" height=\"292\" fill=\"white\" transform=\"translate(-22)\"></rect>\n    </clippath>\n  </defs>\n</svg>"
+      }
+    },
+    "collection_dispatch_nNJ3kt": {
+      "type": "collection-dispatch",
+      "blocks": {
+        "image_tcgbyy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0b771c7d997fba75ab3fc16ea7c0604c184c6178_f52e1c56-b6fb-41ea-9b1f-96412162df39.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Explore category",
+            "button_link": "shopify://collections"
+          }
+        },
+        "image_xA4QAJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b6db6ca1f0b086f794280f00a635400f9cfc4897_7e19740c-33a6-4d37-924a-ee84048cc049.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_dYbmFw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1c6304148abd3eace81a57e8693c02b86ea26b47_81fad0b6-1803-4988-b477-9778bdca8dd2.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_nWJxba": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/d0efce3c3c0fce905cdecd3b457817bfe767acbc_0da9e24d-fdcc-456c-8dd9-206aaf0fcf69.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "image_tcgbyy",
+        "image_xA4QAJ",
+        "image_dYbmFw",
+        "image_nWJxba"
+      ],
+      "name": "Dispatch Banner Collection",
+      "settings": {
+        "title": "THE DISPATCH $divider No filters. just feelings"
+      }
+    }
+  },
+  "order": [
+    "image_with_video_slider_33wqr6",
+    "stories_d7ENqJ",
+    "home_collections_m97Qrx",
+    "marquee_NbgPgR",
+    "find_truth_slider_TmAcRK",
+    "collection_dispatch_nNJ3kt"
+  ]
+}

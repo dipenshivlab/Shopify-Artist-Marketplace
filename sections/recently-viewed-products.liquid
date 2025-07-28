@@ -1,0 +1,57 @@
+
+{% style %}
+  .recently-view--{{ section.id }} {
+    Background: {{ section.settings.bg_color }};
+  }
+{% endstyle %}
+
+{{ 'recently-view-product.css' | asset_url | stylesheet_tag }}
+
+<div class="main-recently-view recently-view--{{ section.id }}">
+  <div class="{% if section.settings.show_full_width %}full-width{% else %}page-width{% endif %}">
+    {% if section.settings.heading != blank %}
+      <div class="header-wrapper top-header-main">
+        <h2 class="heading">{{ section.settings.heading |  replace: '$divider', '<span class="divider"></span>' }}</h2>
+      </div>
+    {% endif %}
+    <div class="multiple-recently-product recently-slider">
+      <div class="swiper-wrapper">
+
+      </div>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+</div>
+{% comment %} <div id="recently-viewed-products"></div> {% endcomment %}
+{% include 'recently-viewed-products' %}
+
+
+{% schema %}
+{
+  "name": "Recently View",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_full_width",
+      "label": "Show Full Width"
+    },
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Add $divider to add divider"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recently View"
+    }
+  ]
+}
+{% endschema %}

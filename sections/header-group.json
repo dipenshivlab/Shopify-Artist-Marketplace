@@ -1,0 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "10% off your first order for our newsletter subscription",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0"
+      ],
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-4",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "megamenu_UkMFxM": {
+          "type": "megamenu",
+          "settings": {
+            "menu_title": "Products",
+            "image": "shopify://shop_images/img_91c7b13c-50eb-4386-9996-7c9591c06c4f.png"
+          }
+        }
+      },
+      "block_order": [
+        "megamenu_UkMFxM"
+      ],
+      "settings": {
+        "button": "For artists",
+        "link": "shopify://pages/artist",
+        "image": "shopify://shop_images/img_a9f39bd0-01b7-4712-8730-32d88341bac1.png",
+        "logo_position": "middle-center",
+        "mobile_logo_position": "center",
+        "menu": "header-menu",
+        "menu_type_desktop": "drawer",
+        "sticky_header_type": "always",
+        "show_line_separator": true,
+        "color_scheme": "scheme-61c63495-cf83-4908-8df7-7ea511b7127d",
+        "menu_color_scheme": "scheme-61c63495-cf83-4908-8df7-7ea511b7127d",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": false,
+        "icon_style": "text",
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

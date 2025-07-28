@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_heading": false
+      }
+    },
+    "email_signup_banner_v2_hibPA3": {
+      "type": "email-signup-banner-v2",
+      "blocks": {
+        "heading_efe7d6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Want to become an artist for vyne?",
+            "heading_size": "h1"
+          }
+        },
+        "email_form_Py6nUF": {
+          "type": "email_form",
+          "settings": {
+            "subscribe_button_label": "SEND REQUEST"
+          }
+        }
+      },
+      "block_order": [
+        "heading_efe7d6",
+        "email_form_Py6nUF"
+      ],
+      "disabled": true,
+      "name": "Email Signup V2",
+      "settings": {
+        "show_background_image": false,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "email_signup_banner_v2_hibPA3"
+  ]
+}

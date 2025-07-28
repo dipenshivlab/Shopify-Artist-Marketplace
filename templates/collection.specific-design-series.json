@@ -1,0 +1,246 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "collection_banner_pGHWJA": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "image": "{{ collection.image }}",
+        "sub_heading": "Short design series description",
+        "heading": "{{ collection.title }}",
+        "show_description": true
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "only_let_right_grid": false,
+        "heading": "Chosen items Empowerment",
+        "show_city_collection": false,
+        "show_sub_collection": false,
+        "heading_main": "",
+        "page_pagination": "loadMore",
+        "load_more_button": "Discover more Themes",
+        "products_per_page": 9,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-61c63495-cf83-4908-8df7-7ea511b7127d",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "sorting_type": "grid",
+        "show_product_count": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection_with_slider_XqzEai": {
+      "type": "collection-with-slider",
+      "blocks": {
+        "collection_pJcjnE": {
+          "type": "collection",
+          "settings": {
+            "collection": "women",
+            "heading": "Not just <br>Women",
+            "image": "shopify://shop_images/new_image.png"
+          }
+        },
+        "collection_N4HRpJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "love-1",
+            "heading": "",
+            "image": "shopify://shop_images/img_3df6dcfc-0158-47bd-8f58-e2427743e0e0.png"
+          }
+        },
+        "collection_4Rhyyw": {
+          "type": "collection",
+          "settings": {
+            "collection": "pride",
+            "heading": "",
+            "image": "shopify://shop_images/img_c39c1352-34d6-4246-9f5f-2962b2d406a3.png"
+          }
+        },
+        "collection_QU3MJD": {
+          "type": "collection",
+          "settings": {
+            "collection": "love",
+            "heading": "",
+            "image": "shopify://shop_images/img_c4c0a168-0a16-4735-afe2-c3e030db7669.png"
+          }
+        },
+        "collection_BRbxkt": {
+          "type": "collection",
+          "settings": {
+            "collection": "folk-heritage-stories",
+            "heading": ""
+          }
+        },
+        "collection_PmidQJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "mysticism",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_pJcjnE",
+        "collection_N4HRpJ",
+        "collection_4Rhyyw",
+        "collection_QU3MJD",
+        "collection_BRbxkt",
+        "collection_PmidQJ"
+      ],
+      "name": "Collection With Slider",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "heading": "other stories $divider to wear"
+      }
+    },
+    "design_series_ghiz3T": {
+      "type": "design-series",
+      "blocks": {
+        "image_rKMmt3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_mYaD7E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_5ad26454-528b-41f3-bfb4-cf25d466d4b1.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_bPzRXK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_49f2c611-0a72-4424-aa39-b7b27932a53f.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_JXRVEE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "image_rKMmt3",
+        "image_mYaD7E",
+        "image_bPzRXK",
+        "image_JXRVEE"
+      ],
+      "name": "Design Series",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "show_mobile_slider": true,
+        "heading": "Other Design series $divider from Divyanka",
+        "button": "Explore more series",
+        "link": "shopify://collections"
+      }
+    },
+    "design_series_8apzwD": {
+      "type": "design-series",
+      "blocks": {
+        "image_rKMmt3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_mYaD7E": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_5ad26454-528b-41f3-bfb4-cf25d466d4b1.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_bPzRXK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card_49f2c611-0a72-4424-aa39-b7b27932a53f.png",
+            "image_size": "tall",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        },
+        "image_JXRVEE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/design_series_card.png",
+            "image_size": "wild",
+            "sub_heading": "By Divyanka Chandrasekaran",
+            "heading": "series name",
+            "link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "image_rKMmt3",
+        "image_mYaD7E",
+        "image_bPzRXK",
+        "image_JXRVEE"
+      ],
+      "name": "Design Series",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "",
+        "show_mobile_slider": true,
+        "heading": "Design series $divider Empowerment",
+        "button": "Explore more series",
+        "link": "shopify://collections"
+      }
+    }
+  },
+  "order": [
+    "collection_banner_pGHWJA",
+    "product-grid",
+    "collection_with_slider_XqzEai",
+    "design_series_ghiz3T",
+    "design_series_8apzwD"
+  ]
+}

@@ -1,0 +1,342 @@
+.truth-container-main {
+  margin-bottom: 160px;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.truth-container-main .top-header-main {
+  margin-bottom: 60px;
+}
+
+.truth-container-main .top-header-main .heading {
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.truth-container-main .top-header-main .divider {
+  flex: 1;
+  width: 100%;
+  height: 2px;
+  background-color: #11120D;
+  display: inline-flex;
+}
+
+.truth-container-main .collection-block-with-slider {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.truth-container-main .collection-block-with-slider .truth-info.truth-info-first {
+  max-width: 440px;
+  width: calc(100% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  border: 2px solid #565448;
+  border-radius: 4px;
+}
+
+.truth-container-main .collection-block-with-slider .top-svg-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 38%;
+}
+
+.truth-container-main .collection-block-with-slider .bottom-svg-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 38%;
+}
+
+.truth-container-main .collection-block-with-slider .top-svg-content svg,
+.truth-container-main .collection-block-with-slider .bottom-svg-content svg {
+  max-height: 100%;
+  width: auto;
+}
+
+.truth-container-main .collection-block-with-slider .truth-info.truth-info-first .truth-title-main {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 284px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.truth-container-main .collection-block-with-slider .truth-info.truth-info-first .truth-title-main .truth-title {
+  font-size: 28px;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+.truth-container-main .collection-block-with-slider .truth-info.truth-info-first .truth-title-main .button {
+  font-size: 21px;
+  font-family: var(--font-body-family);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  padding: 8px 24px;
+  background-color: #11120D;
+  color: #FFFAF4;
+  max-width: 274px;
+  border-radius: 4px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.truth-container-main .collection-block-with-slider .find-truth-container {
+  max-width: calc(100% - 460px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.truth-container-main .find-truth-container .truth-info {
+  height: auto;
+  padding-bottom: 40%;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.truth-container-main .find-truth-container .truth-info .image-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.truth-container-main .find-truth-container .truth-info .image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.truth-container-main .find-truth-container .truth-info .collection-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 14px 8px;
+  font-family: var(--font-heading-family);
+  font-weight: 400;
+  font-size: calc(var(--font-body-scale) * 2.8rem);
+  line-height: 1.2;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.truth-container-main .find-truth-container .truth-info .text {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: calc(var(--font-body-scale) * 1.4rem);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  line-height: 1.3;
+  z-index: 2;
+}
+
+.truth-container-main .find-truth-container .swiper-scrollbar {
+  margin-top: 20px;
+  position: unset;
+  background: transparent;
+  height: 12px;
+  transition-duration: 0ms;
+  padding: 2px 0;
+  width: calc(100% - 4px);
+  margin-left: 2px;
+  position: relative;
+  top: unset;
+  left: unset;
+  bottom: unset;
+}
+
+.truth-container-main .find-truth-container .swiper-scrollbar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: 100%;
+  background: rgba(86, 84, 72, 0.4);
+  border-radius: 100px;
+}
+
+.truth-container-main .find-truth-container .swiper-scrollbar .swiper-scrollbar-drag {
+  background: rgba(86, 84, 72, 0.8);
+  display: block;
+}
+
+.truth-container-main .truth-container .bottom-btn {
+  display: none;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background-color: #11120D;
+  color: #FFFAF4;
+  font-weight: 500;
+  font-size: calc(var(--font-body-scale) * 2.1rem);
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  min-height: unset;
+  min-width: unset;
+}
+
+.truth-container-main .truth-container .bottom-btn:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.truth-container-main .truth-container .bottom-btn::after,
+.truth-container-main .truth-container .bottom-btn::before {
+  display: none;
+}
+
+.truth-container-main .collection-block-with-slider .swiper-scrollbar {
+  height: 12px !important;
+  background: #56544866;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative;
+  left: 0;
+  display: flex;
+  width: 100%;
+  padding: 2px;
+}
+
+.truth-container-main .collection-block-with-slider .swiper-scrollbar-drag {
+  display: block !important;
+  background: #565448CC;
+}
+
+@media(max-width: 1600px) {
+  .truth-container-main .collection-block-with-slider .truth-info.truth-info-first {
+    max-width: 350px;
+  }
+
+  .truth-container-main .collection-block-with-slider .find-truth-container {
+    max-width: calc(100% - 370px);
+  }
+}
+
+@media(max-width: 1400px) {
+  .truth-container-main .collection-block-with-slider .truth-info.truth-info-first {
+    max-width: 250px;
+  }
+
+  .truth-container-main .collection-block-with-slider .find-truth-container {
+    max-width: calc(100% - 270px);
+  }
+
+  .truth-container-main .find-truth-container .truth-info .collection-title {
+    font-size: calc(var(--font-body-scale) * 2.4rem);
+  }
+
+  .truth-container-main .collection-block-with-slider .truth-info.truth-info-first .truth-title-main .truth-title {
+    font-size: 22px;
+  }
+
+  .truth-container-main .collection-block-with-slider .truth-info.truth-info-first .truth-title-main .button {
+    font-size: 16px;
+  }
+
+  .truth-container-main .collection-block-with-slider .top-svg-content,
+  .truth-container-main .collection-block-with-slider .bottom-svg-content {
+    height: 30%;
+  }
+}
+
+@media(max-width: 1024px) {
+  .truth-container-main {
+    margin-bottom: 120px;
+  }
+
+  .truth-container-main .top-header-main {
+    margin-bottom: 40px;
+  }
+
+  .truth-container-main .find-truth-container .truth-info .collection-title {
+    font-size: calc(var(--font-body-scale) * 2rem);
+  }
+
+  .truth-container-main .truth-container .bottom-btn {
+    font-size: calc(var(--font-body-scale) * 1.8rem);
+  }
+
+  .truth-container-main .find-truth-container .truth-info {
+    padding-bottom: 50%;
+  }
+
+  .truth-container-main .collection-block-with-slider .truth-info.truth-info-first {
+    max-width: 270px;
+  }
+
+  .truth-container-main .collection-block-with-slider .find-truth-container {
+    max-width: calc(100% - 290px);
+  }
+}
+
+@media(max-width: 991px) {
+  .truth-container-main .collection-block-with-slider .find-truth-container {
+    max-width: 100%;
+  }
+
+  .truth-container-main .collection-block-with-slider .truth-info.truth-info-first {
+    display: none;
+  }
+}
+
+@media(max-width: 767px) {
+  .truth-container-main {
+    margin-bottom: 80px;
+    padding: 0 10px;
+  }
+
+  .truth-container-main .top-header-main {
+    margin-bottom: 20px;
+  }
+
+  .truth-container-main .top-header-main .heading {
+    display: block;
+  }
+
+  .truth-container-main .top-header-main .divider {
+    display: none;
+  }
+
+  .truth-container-main .truth-container .bottom-btn {
+    display: block;
+    margin-top: 20px;
+    font-size: calc(var(--font-body-scale) * 1.6rem);
+  }
+
+  .truth-container-main .find-truth-container .truth-info .collection-title {
+    font-size: calc(var(--font-body-scale) * 1.5rem);
+  }
+
+  .truth-container-main .find-truth-container .truth-info {
+    padding-bottom: 65.8%;
+  }
+}

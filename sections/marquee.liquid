@@ -1,0 +1,228 @@
+{% if section.blocks.size > 0 %}
+  <style>
+    #marquee-main--{{ section.id }} {
+      background: {{ section.settings.bg_color }};
+    }
+
+    .marquee-main {
+      overflow: hidden;
+      margin-bottom: 86px;
+      position: relative;
+    }
+    .marquee-main .marquee-content-wrap {
+      display: flex;
+      width: 100%;
+    }
+    .marquee-main .multiple-marquee-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .marquee-main .marquee-first,
+    .marquee-main .marquee-second {
+      display: inline-flex;
+      white-space: nowrap;
+      will-change: transform;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-duration:40s;
+    }
+
+    .marquee-main .direction-left-to-right {
+      animation-name: marquee-ltr;
+    }
+
+    @keyframes marquee-ltr {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .marquee-main .direction-right-to-left {
+      animation-name: marquee-rtl;
+    }
+
+    @keyframes marquee-rtl {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    .marquee-main .text-one, .marquee-main .text-two {
+        margin: 0 35px;
+        font-size: 64px;
+        line-height: 1.1;
+        white-space: nowrap;
+        color: #fff;
+        font-family: var(--font-heading-family);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+    }
+
+    .marquee-main .multiple-multiple-marquee-container{
+        transform: rotate(-4deg);
+        padding: 68px 0;
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
+    .marquee-main .marquee-one {
+        background-color: #719EA3;
+        padding: 10px 0;
+    }
+    .marquee-main .marquee-two {
+        background-color: #565448;
+        margin-top: 40px;
+        padding: 10px 0;
+    }
+    @media(max-width: 1023px) {
+      .marquee-main .text-one, .marquee-main .text-two {
+        margin: 0 20px;
+        font-size: 32px;
+      }
+      .marquee-main .marquee-two {
+        margin-top: 30px;
+      }
+      .marquee-main .multiple-multiple-marquee-container {
+        padding: 40px 0;
+      }
+    }
+
+    @media(max-width: 767px) {
+      .marquee-main .text-one, .marquee-main .text-two {
+        margin: 0 10px;
+        font-size: 15px;
+      }
+      .marquee-main .marquee-two {
+        margin-top: 20px;
+      }
+      .marquee-main .multiple-multiple-marquee-container {
+        padding: 16px 0;
+      }
+    }
+  </style>
+
+  <div class="marquee-main marquee-main--{{ section.id }}">
+    <div class="full-width">
+      <div class="multiple-multiple-marquee-container">
+        <div class="marquee-one">
+          <div class="marquee-first direction-{{ section.settings.text_direction_m1 }}">
+            {% for i in (1..4) %}
+              <div class="marquee-content-wrap">
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'first_marquee' %}
+                      {% if block.settings.text_one != blank %}
+                        <div class="first-marquee">
+                          <h3 class="text-one">{{ block.settings.text_one }}</h3>
+                        </div>
+                      {% endif %}
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="marquee-two">
+          <div class="marquee-second direction-{{ section.settings.text_direction_m2 }}">
+            {% for i in (1..4) %}
+              <div class="marquee-content-wrap">
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'second_marquee' %}
+                      {% if block.settings.text_two != blank %}
+                        <div class="second-marquee">
+                          <h3 class="text-two">{{ block.settings.text_two }}</h3>
+                        </div>
+                      {% endif %}
+                  {% endcase %}
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Marquee",
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+    {
+      "type": "select",
+      "id": "text_direction_m1",
+      "label": "Text Direction marquee1",
+      "default": "left-to-right",
+      "options": [
+        {
+          "value": "left-to-right",
+          "label": "Left to Right"
+        },
+        {
+          "value": "right-to-left",
+          "label": "Right to Left"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "text_direction_m2",
+      "label": "Text Direction marquee2",
+      "default": "right-to-left",
+      "options": [
+        {
+          "value": "left-to-right",
+          "label": "Left to Right"
+        },
+        {
+          "value": "right-to-left",
+          "label": "Right to Left"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "first_marquee",
+      "name": "First marquee",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_one",
+          "label": "Marquee text"
+        }
+      ]
+    },
+    {
+      "type": "second_marquee",
+      "name": "Second marquee",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_two",
+          "label": "Marquee text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee"
+    }
+  ]
+}
+{% endschema %}

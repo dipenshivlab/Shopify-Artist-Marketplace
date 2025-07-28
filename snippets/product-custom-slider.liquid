@@ -1,0 +1,52 @@
+{% style %}
+  .product-media-slider img {
+    width: 100%;
+    height: auto;
+  }
+  .product--full .product__media-wrapper {
+    width: 100%;
+    position: relative;
+  }
+{% endstyle %}
+
+<div class="product-media-slider custom-product-sliders">
+  <div class="swiper-wrapper">
+    {% for image in product.images %}
+      <div class="swiper-slide custom-image-grid">
+        <img src="{{ image |  image_url: width: 700 }}">
+      </div>
+    {% endfor %}
+  </div>
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var galleryThumbs = new Swiper('.custom-product-sliders', {
+      freemode: true,
+      spaceBetween: 8,
+      slidesPerView: 1.1,
+      scrollbar: {
+        el: '.custom-product-sliders .swiper-scrollbar',
+        draggable: true,
+      },
+      breakpoints: {
+        320: {
+          freemode: true,
+          slidesPerView: 1.1,
+          spaceBetween: 8,
+        },
+        768: {
+          freemode: true,
+          slidesPerView: 1.5,
+          spaceBetween: 8,
+        },
+        991: {
+          freemode: true,
+          slidesPerView: 2.6,
+          spaceBetween: 20,
+        },
+      },
+    });
+  });
+</script>

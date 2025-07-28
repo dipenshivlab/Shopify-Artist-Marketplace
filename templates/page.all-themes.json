@@ -1,0 +1,170 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_heading": false
+      }
+    },
+    "rich_text_7ACqbG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4V4G6c": {
+          "type": "heading",
+          "settings": {
+            "heading": "For Voices Like Yours. Raw. Honest. Limited.",
+            "heading_size": "hxxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4V4G6c"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "all_themes_collections_YyHtG9": {
+      "type": "all-themes-collections",
+      "blocks": {
+        "tab_JpMzYt": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Price up",
+            "tab_collections": [
+              "bags",
+              "folk-heritage-stories",
+              "laptop-cases",
+              "love",
+              "love-1",
+              "mysticism",
+              "pride",
+              "tshirts",
+              "women"
+            ]
+          }
+        },
+        "tab_nncKBP": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "From newer",
+            "tab_collections": [
+              "bags",
+              "laptop-cases",
+              "love",
+              "love-1",
+              "mysticism",
+              "pride",
+              "tshirts",
+              "women"
+            ]
+          }
+        },
+        "tab_eMEJDJ": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "will dissapear soon",
+            "tab_collections": [
+              "bags",
+              "folk-heritage-stories",
+              "laptop-cases",
+              "love",
+              "love-1",
+              "mysticism",
+              "pride",
+              "women"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "tab_JpMzYt",
+        "tab_nncKBP",
+        "tab_eMEJDJ"
+      ],
+      "name": "Tabbed Collection Display",
+      "settings": {
+        "heading": "For Voices Like Yours. Raw. Honest. Limited.",
+        "show_more_btn_txt": "Discover more Themes"
+      }
+    },
+    "collection_dispatch_piAAR8": {
+      "type": "collection-dispatch",
+      "blocks": {
+        "image_tcgbyy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/0b771c7d997fba75ab3fc16ea7c0604c184c6178_f52e1c56-b6fb-41ea-9b1f-96412162df39.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_xA4QAJ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b6db6ca1f0b086f794280f00a635400f9cfc4897_7e19740c-33a6-4d37-924a-ee84048cc049.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_dYbmFw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1c6304148abd3eace81a57e8693c02b86ea26b47_81fad0b6-1803-4988-b477-9778bdca8dd2.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_nWJxba": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/d0efce3c3c0fce905cdecd3b457817bfe767acbc_0da9e24d-fdcc-456c-8dd9-206aaf0fcf69.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "image_tcgbyy",
+        "image_xA4QAJ",
+        "image_dYbmFw",
+        "image_nWJxba"
+      ],
+      "name": "Dispatch Banner Collection",
+      "settings": {
+        "title": "THE DISPATCH No filters. just feelings"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_7ACqbG",
+    "all_themes_collections_YyHtG9",
+    "collection_dispatch_piAAR8"
+  ]
+}
