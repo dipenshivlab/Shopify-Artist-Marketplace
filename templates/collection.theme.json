@@ -162,6 +162,15 @@
         "link": "shopify://collections"
       }
     },
+    "collection_artist_list_NgbCLE": {
+      "type": "collection-artist-list",
+      "name": "Collection Artist List",
+      "settings": {
+        "heading": "Minds Behind $divider $collection",
+        "button": "Find more Artists",
+        "link": "shopify://pages/artist"
+      }
+    },
     "collection_dispatch_p6FXYR": {
       "type": "collection-dispatch",
       "blocks": {
@@ -215,15 +224,6 @@
       "name": "Dispatch Banner Collection",
       "settings": {
         "title": "THE DISPATCH $divider No filters. just feelings"
-      }
-    },
-    "collection_artist_list_NgbCLE": {
-      "type": "collection-artist-list",
-      "name": "Collection Artist List",
-      "settings": {
-        "heading": "",
-        "button": "Find more Artists",
-        "link": ""
       }
     }
   },
