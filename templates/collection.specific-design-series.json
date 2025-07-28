@@ -16,7 +16,7 @@
         "show_full_width": true,
         "bg_color": "",
         "image": "{{ collection.image }}",
-        "sub_heading": "Short design series description",
+        "sub_heading": "{{ collection.metafields.custom.collection_sub_title.value }}",
         "heading": "{{ collection.title }}",
         "show_description": true
       }
