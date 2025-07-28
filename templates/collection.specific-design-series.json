@@ -225,6 +225,7 @@
         "image_bPzRXK",
         "image_JXRVEE"
       ],
+      "disabled": true,
       "name": "Design Series",
       "settings": {
         "show_full_width": true,
@@ -234,6 +235,15 @@
         "button": "Explore more series",
         "link": "shopify://collections"
       }
+    },
+    "collection_artist_list_wtD6f6": {
+      "type": "collection-artist-list",
+      "name": "Collection Artist List",
+      "settings": {
+        "heading": "",
+        "button": "Find more Artists",
+        "link": ""
+      }
     }
   },
   "order": [
@@ -241,6 +251,7 @@
     "product-grid",
     "collection_with_slider_XqzEai",
     "design_series_ghiz3T",
-    "design_series_8apzwD"
+    "design_series_8apzwD",
+    "collection_artist_list_wtD6f6"
   ]
 }
