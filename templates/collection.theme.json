@@ -30,6 +30,15 @@
         "show_description": false
       }
     },
+    "dynamic_collection_series_pahWCA": {
+      "type": "dynamic-collection-series",
+      "name": "Dynamic Collection Series",
+      "settings": {
+        "heading": "Design series $divider $artist",
+        "button": "Explore more series",
+        "link": ""
+      }
+    },
     "design_series_NYrjzj": {
       "type": "design-series",
       "blocks": {
@@ -230,6 +239,7 @@
   "order": [
     "banner",
     "collection_banner_EdDEr7",
+    "dynamic_collection_series_pahWCA",
     "design_series_NYrjzj",
     "product-grid",
     "home_collections_kwA6Ch",
