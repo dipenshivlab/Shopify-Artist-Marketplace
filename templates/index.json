@@ -198,50 +198,91 @@
     "home_collections_m97Qrx": {
       "type": "home-collections",
       "blocks": {
+        "collection_JXQtxt": {
+          "type": "collection",
+          "settings": {
+            "collection": "shweta-iyer"
+          }
+        },
+        "collection_mHyDBT": {
+          "type": "collection",
+          "settings": {
+            "collection": "shyam"
+          }
+        },
+        "collection_RUcQ9U": {
+          "type": "collection",
+          "settings": {
+            "collection": "kaushal"
+          }
+        },
         "collection_jj8dQ9": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "divyanka-chandrasekaran"
           }
         },
         "collection_CCdkUp": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "deepak-verma"
           }
         },
         "collection_xtJ4AJ": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "shruti-chatterjee"
           }
         },
         "collection_8kiGV4": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "priya-sinha"
           }
         },
         "collection_JNx37h": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "rina-patel"
           }
         },
         "collection_tT9GcN": {
           "type": "collection",
+          "disabled": true,
           "settings": {
             "collection": "manish-venkataraman"
+          }
+        },
+        "collection_WUPm9g": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_zLMPyQ": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
           }
         }
       },
       "block_order": [
+        "collection_JXQtxt",
+        "collection_mHyDBT",
+        "collection_RUcQ9U",
         "collection_jj8dQ9",
         "collection_CCdkUp",
         "collection_xtJ4AJ",
         "collection_8kiGV4",
         "collection_JNx37h",
-        "collection_tT9GcN"
+        "collection_tT9GcN",
+        "collection_WUPm9g",
+        "collection_zLMPyQ"
       ],
       "name": "Collections",
       "settings": {
@@ -298,6 +339,7 @@
         "second_marquee_WAMajn",
         "second_marquee_BniAgw"
       ],
+      "disabled": true,
       "name": "Marquee",
       "settings": {
         "bg_color": "",
