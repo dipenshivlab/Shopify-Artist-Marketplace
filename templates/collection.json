@@ -126,6 +126,7 @@
         "collection_BRbxkt",
         "collection_PmidQJ"
       ],
+      "disabled": true,
       "name": "Collection With Slider",
       "settings": {
         "show_full_width": true,
