@@ -132,6 +132,59 @@
         "bg_color": "#D8D0BD33",
         "heading": "other stories $divider to wear"
       }
+    },
+    "collection_with_slider_AfEncP": {
+      "type": "collection-with-slider",
+      "blocks": {
+        "collection_GyUfCb": {
+          "type": "collection",
+          "settings": {
+            "collection": "underground-culture",
+            "heading": ""
+          }
+        },
+        "collection_xTzRN7": {
+          "type": "collection",
+          "settings": {
+            "collection": "empowerment-1",
+            "heading": ""
+          }
+        },
+        "collection_MpiLeg": {
+          "type": "collection",
+          "settings": {
+            "collection": "eco",
+            "heading": ""
+          }
+        },
+        "collection_nyWNWT": {
+          "type": "collection",
+          "settings": {
+            "collection": "pride-1",
+            "heading": ""
+          }
+        },
+        "collection_pnke3y": {
+          "type": "collection",
+          "settings": {
+            "collection": "nostalgia",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_GyUfCb",
+        "collection_xTzRN7",
+        "collection_MpiLeg",
+        "collection_nyWNWT",
+        "collection_pnke3y"
+      ],
+      "name": "Collection With Slider",
+      "settings": {
+        "show_full_width": true,
+        "bg_color": "#D8D0BD33",
+        "heading": "other stories $divider to wear"
+      }
     }
   },
   "order": [
@@ -139,6 +192,7 @@
     "banner",
     "dynamic_collection_series_gCN6xU",
     "product-grid",
-    "collection_with_slider_mAn4fp"
+    "collection_with_slider_mAn4fp",
+    "collection_with_slider_AfEncP"
   ]
 }
