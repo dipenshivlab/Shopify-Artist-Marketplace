@@ -174,6 +174,15 @@
             "mandatory_class": "normal",
             "button_label": "Explore category"
           }
+        },
+        "story_zcbRhU": {
+          "type": "story",
+          "settings": {
+            "collection": "pride-1",
+            "show_logo_image": false,
+            "mandatory_class": "normal",
+            "button_label": "Explore category"
+          }
         }
       },
       "block_order": [
@@ -184,7 +193,8 @@
         "story_GcXVCe",
         "story_brXWJE",
         "story_Hfdhx7",
-        "story_TghYDW"
+        "story_TghYDW",
+        "story_zcbRhU"
       ],
       "name": "Stories",
       "settings": {
