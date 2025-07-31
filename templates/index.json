@@ -104,7 +104,7 @@
         "story_qG3tXh": {
           "type": "story",
           "settings": {
-            "collection": "mysticism",
+            "collection": "pride-1",
             "show_logo_image": false,
             "mandatory_class": "big",
             "button_label": "Explore category"
@@ -123,7 +123,7 @@
         "story_NVYGXf": {
           "type": "story",
           "settings": {
-            "collection": "love",
+            "collection": "empowerment-1",
             "show_logo_image": false,
             "mandatory_class": "normal",
             "button_label": "Explore category"
@@ -132,7 +132,7 @@
         "story_w3C9Pf": {
           "type": "story",
           "settings": {
-            "collection": "folk-heritage-stories",
+            "collection": "eco",
             "show_logo_image": false,
             "mandatory_class": "wide",
             "button_label": "Explore category"
@@ -141,7 +141,7 @@
         "story_GcXVCe": {
           "type": "story",
           "settings": {
-            "collection": "pride",
+            "collection": "nostalgia",
             "show_logo_image": false,
             "mandatory_class": "wide",
             "button_label": "Explore category"
@@ -150,7 +150,7 @@
         "story_brXWJE": {
           "type": "story",
           "settings": {
-            "collection": "women",
+            "collection": "underground-culture",
             "show_logo_image": false,
             "mandatory_class": "big",
             "button_label": "Explore category"
@@ -158,6 +158,7 @@
         },
         "story_Hfdhx7": {
           "type": "story",
+          "disabled": true,
           "settings": {
             "collection": "love-1",
             "show_logo_image": false,
@@ -174,15 +175,6 @@
             "mandatory_class": "normal",
             "button_label": "Explore category"
           }
-        },
-        "story_zcbRhU": {
-          "type": "story",
-          "settings": {
-            "collection": "pride-1",
-            "show_logo_image": false,
-            "mandatory_class": "normal",
-            "button_label": "Explore category"
-          }
         }
       },
       "block_order": [
@@ -193,8 +185,7 @@
         "story_GcXVCe",
         "story_brXWJE",
         "story_Hfdhx7",
-        "story_TghYDW",
-        "story_zcbRhU"
+        "story_TghYDW"
       ],
       "name": "Stories",
       "settings": {
