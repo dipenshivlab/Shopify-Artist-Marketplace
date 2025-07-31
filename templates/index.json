@@ -442,6 +442,62 @@
         "image_dYbmFw",
         "image_nWJxba"
       ],
+      "disabled": true,
+      "name": "Dispatch Banner Collection",
+      "settings": {
+        "title": "THE DISPATCH $divider No filters. just feelings"
+      }
+    },
+    "collection_dispatch_iXdTfg": {
+      "type": "collection-dispatch",
+      "blocks": {
+        "image_6J8P9H": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pexels-jadson-thomas-164235-542556_a03b25da-dae5-40de-b2e2-aac5e62fd5bc.jpg",
+            "heading": "We are Vyne",
+            "text": "Been watching. Too much gloss. Too little grit. Everyone's curating. No one’s cracking open. We didn’t show up to be another platform.We showed up because we were tired of pretending this was fine. Art, flattened.Expression, templated. Identity, packaged for performance. We don’t want polish.We want tension.",
+            "button_text": "Read More",
+            "button_link": "https://artistmp.myshopify.com/blogs/news/we-are-vyne"
+          }
+        },
+        "image_Y39Ggy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/b6db6ca1f0b086f794280f00a635400f9cfc4897_7e19740c-33a6-4d37-924a-ee84048cc049.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_MnVBcw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1c6304148abd3eace81a57e8693c02b86ea26b47_81fad0b6-1803-4988-b477-9778bdca8dd2.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "image_zdej73": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/d0efce3c3c0fce905cdecd3b457817bfe767acbc_0da9e24d-fdcc-456c-8dd9-206aaf0fcf69.png",
+            "heading": "Summer 25’ by elan watson",
+            "text": "I create art that speaks — sometimes loud, sometimes soft, but always personal. Through my prints, I try to turn emotions, thoughts, or stories into something you can wear and carry with you.",
+            "button_text": "Read more",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "image_6J8P9H",
+        "image_Y39Ggy",
+        "image_MnVBcw",
+        "image_zdej73"
+      ],
       "name": "Dispatch Banner Collection",
       "settings": {
         "title": "THE DISPATCH $divider No filters. just feelings"
@@ -454,6 +510,7 @@
     "home_collections_m97Qrx",
     "marquee_NbgPgR",
     "find_truth_slider_TmAcRK",
-    "collection_dispatch_nNJ3kt"
+    "collection_dispatch_nNJ3kt",
+    "collection_dispatch_iXdTfg"
   ]
 }

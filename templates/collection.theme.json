@@ -177,7 +177,7 @@
       "name": "Collection Artist List",
       "settings": {
         "heading": "Minds Behind $divider $collection",
-        "button": "Find more Artists",
+        "button": "",
         "link": "shopify://pages/artist"
       }
     },
