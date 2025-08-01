@@ -27,7 +27,7 @@
         "image": "{{ collection.image }}",
         "sub_heading": "{{ collection.metafields.custom.collection_sub_title.value }}",
         "heading": "{{ collection.title }}",
-        "show_description": false
+        "show_description": true
       }
     },
     "dynamic_collection_series_pahWCA": {
